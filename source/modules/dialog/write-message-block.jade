@@ -1,0 +1,13 @@
+mixin write-message-block()
+	.write-message-block
+		.write-message-block__textarea-block
+			textarea(placeholder="Напишите Ваше сообщение").write-message-block__textarea-block__textarea
+			// .write-message-block__textarea-block__textarea(data-placeholder="Напишите Ваше сообщение")
+			a(href="#").write-message-block__textarea-block__button
+
+		.write-message-block__bottom
+			button.button Отправить
+			.write-message-block__bottom__smile-list
+				- for (var i = 1; i <= 7; i++)
+					a(href="#")
+						img(src="img/icons/sm" + (i % 4 + 1) + ".png", alt=i)

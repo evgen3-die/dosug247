@@ -43,7 +43,6 @@ gs( type = "fixed", cols = false, col-width = false, gut-width = false )
 	if selector() != "&"
 		width: $grid-config[ "total-width" ]
 		margin: 0 auto
-		overflow: hidden
 	if type != "fixed" && type != "fluid"
 		error( "Unknown grid system type '" + type + "' !" )
 
@@ -57,7 +56,8 @@ row()
 		_gut = unit( $grid-config[ "gutter-width" ], "" )
 		_comp = unit( $grid-config[ "computed-total-width" ], "" )
 		width: unit( _total * ( ( _gut + _comp ) / _comp ), "%" )
-		margin: 0 unit( _total * ( ( ( _gut * .5 ) / _comp ) * -1 ), "%" )
+		_mtemp = unit( _total * ( ( ( _gut * .5 ) / _comp ) * -1 ), "%" )
+		margin: 0 _mtemp
 
 col( size = false, basestyle = true)
 	unless size
@@ -65,7 +65,6 @@ col( size = false, basestyle = true)
 	if basestyle
 		display: inline-block
 		float: left
-		overflow: hidden
 	if $grid-config[ "type" ] == "fixed"
 		width: round( $grid-config[ "total-width" ] * ( ( ( ( $grid-config[ "gutter-width" ] + $grid-config[ "column-width" ] ) * size ) - $grid-config[ "gutter-width" ] ) / $grid-config[ "computed-total-width" ] ), 5 )
 		if basestyle
@@ -77,7 +76,8 @@ col( size = false, basestyle = true)
 		_comp = unit( $grid-config[ "computed-total-width" ], "" )
 		width: unit( _total * ( ( ( ( _gut + _col ) * size ) - _gut ) / _comp ), "%" )
 		if basestyle
-			margin: 0 unit( _total * ( ( _gut * .5 ) / _comp ), "%" )
+			_mtemp = unit( _total * ( ( _gut * .5 ) / _comp ), "%" )
+			margin: _mtemp _mtemp
 
 offset( size = 1 )
 	if $grid-config[ "type" ] == "fixed"
@@ -90,7 +90,7 @@ offset( size = 1 )
 		margin-left: unit( _total * ( ( ( _gut + _col ) * size + ( _gut * .5 ) ) / _comp ), "%" )
 
 .grid
-	gs( type: "fluid", cols: 12, gut-width: 1.5% )
+	gs( type: "fluid", cols: 12, gut-width: 3% )
 	// gs()
 	&__row
 		row()

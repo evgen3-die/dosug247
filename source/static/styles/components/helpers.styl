@@ -22,15 +22,22 @@
 		margin 5px 0px 0px 15px
 
 .align-image-center
+.align-center
 	text-align center
 
 .align-image-left
 	float left
 	margin 5px 15px 0px 0px
+	+below($media-size3)
+		float: none
+		margin: 0
 
 .align-image-right
 	float right
 	margin 5px 0px 0px 15px
+	+below($media-size3)
+		float: none
+		margin: 0
 
 .image-captioned
 	margin-bottom 20px

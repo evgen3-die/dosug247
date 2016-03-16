@@ -1,0 +1,14 @@
+extends ../modules/layout/layout
+include ../modules/my-reviews-list/my-reviews-list
+
+block content
+	+sidebar-left-lk-2()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Мои отзывы"])
+		+page-title({"title": "Мои отзывы"})
+
+		+my-reviews-list()
+
+	.clear

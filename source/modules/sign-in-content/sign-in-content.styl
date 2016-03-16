@@ -1,0 +1,43 @@
+.sign-in-content
+	padding: 12px 24px;
+	background-color: $color2
+	padding-bottom: 48px
+	+below($media-size6)
+		padding-bottom: 12px
+	&__text
+		font-size: 16px
+		color: $color9
+		margin-bottom: 15px
+	&__form
+		letter-spacing: -.31em;
+		> *
+			letter-spacing: normal;
+		&__input
+			width: 117px
+			display: inline-block
+			+below($media-size6)
+				width: 56%
+			& + &
+				margin-left: 10px
+				+below($media-size6)
+					margin-left: 0
+					margin-top: 10px
+			.form-item_style_default .form-item__input input
+				border-radius: 2px;
+				background-color: #ffffff;
+				border-color: white
+		&__button
+			display: inline-block
+			width: 80px
+			margin-left: 10px
+		&__text
+			margin-left: 10px
+			display: inline-block
+			font-size: 16px
+			+below($media-size2)
+				margin-left: 0
+				display: block
+			+below($media-size6)
+				margin-top: 15px
+			a
+				color: $color3

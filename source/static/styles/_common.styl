@@ -2,6 +2,325 @@
 html, body
 	height 100%
 
+*
+*:after
+*:before
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+::-webkit-file-upload-button { cursor:pointer; }
+
+hr.line1
+	background-image: url(../img/line1.png)
+	background-repeat: repeat-x;
+	height: 1px
+	border none
+	margin: 12px 0
+
+hr.line2
+	margin 30px 0
+	border-color: $color2
+
+hr.line3
+	background-image: url(../img/line2.png)
+	background-repeat: repeat-x;
+	height: 1px
+	border none
+	margin: 10px 0
+
+.orange
+	&
+	&:hover
+	&:visited
+		color: $color3 !important
+
+.title1
+	font-size: 18px
+	font-weight: 700
+	color: $color7
+
+.image-icon
+	background-repeat: no-repeat
+	background-position: center
+	display: inline-block
+
+.image-icon.phone
+	background-image: url(../img/icons/phone.png)
+	width: 11px
+	height: 16px
+
+.image-icon.clock
+	background-image: url(../img/icons/clock.png)
+	width: 12px
+	height: 12px
+
+.image-icon.speech
+	background-image: url(../img/icons/speech.png)
+	width: 14px
+	height: 12px
+
+.image-icon.metro
+	background-image: url(../img/icons/metro.png)
+	width: 23px
+	height: 21px
+
+.image-icon.video
+	background-image: url(../img/icons/video.png)
+	width: 20px
+	height: 17px
+
+.image-icon.speech-bubble
+	background-image: url(../img/icons/speech-bubble.png)
+	width: 22px
+	height: 16px
+
+.image-icon.preference-yes
+	background-image: url(../img/icons/preference-yes.png)
+	width: 11px
+	height: 11px
+
+.image-icon.human
+	background-image: url(../img/icons/human.png)
+	width: 11px
+	height: 9px
+
+.image-icon.preference-no
+	background-image: url(../img/icons/preference-no.png)
+	width: 10px
+	height: 11px
+
+.image-icon.back
+	background-image: url(../img/icons/back.png)
+	width: 12px
+	height: 12px
+
+.image-icon.change
+.image-icon.delete
+.image-icon.disabled
+.image-icon.enabled
+.image-icon.stop
+	width: 22px
+	height: 22px
+
+.image-icon.change
+	background-image: url(../img/icons/change.png)
+.image-icon.delete
+	background-image: url(../img/icons/delete.png)
+.image-icon.disabled
+	background-image: url(../img/icons/disabled.png)
+.image-icon.enabled
+	background-image: url(../img/icons/enabled.png)
+.image-icon.stop
+	background-image: url(../img/icons/stop.png)
+
+.image-icon.coins
+	width: 24px
+	height: 15px
+	background-image: url(../img/icons/coins.png)
+
+.image-icon.plump
+	width: 21px
+	height: 13px
+	background-image: url(../img/icons/plump.png)
+
+.image-icon.male
+	width: 20px
+	height: 20px
+	background-image: url(../img/icons/male.png)
+
+.image-icon.slideshow
+	width: 21px
+	height: 17px
+	background-image: url(../img/icons/slideshow.png)
+
+.image-icon.pen
+	width: 18px
+	height: 18px
+	background-image: url(../img/icons/pen.png)
+
+.image-icon.download
+	width: 18px
+	height: 18px
+	background-image: url(../img/icons/download.png)
+
+.image-icon.register
+	background-image: url(../img/icons/register.png)
+	width: 18px
+	height: 14px
+
+.image-icon.crown
+	background-image: url(../img/icons/crown.png)
+	width: 24px
+	height: 16px
+
+.image-icon.crown-orange
+	background-image: url(../img/icons/crown-orange.png)
+	width: 24px
+	height: 16px
+
+.image-icon.clock-black
+	background-image: url(../img/icons/clock-black.png)
+	width: 19px
+	height: 19px
+
+.image-icon.map-pin
+	background-image: url(../img/icons/map-pin.png)
+	width: 14px
+	height: 20px
+
+.image-icon.like
+	background-image: url(../img/icons/like.png)
+	width: 23px
+	height: 17px
+
+.image-icon.hint
+	width: 15px
+	height: 15px
+	margin-right: 5px
+	text-align: center
+	color: #f8f8f8
+	border-radius: 2px
+	background-color: $color3
+	font-size: 14px
+	font-weight: 700
+	font-style: normal
+	line-height: 15px
+	&:before
+		content: "!"
+
+.ps-container
+	.ps-scrollbar-y-rail
+		width: 4px
+		background: $color2
+		right: 0
+	.ps-scrollbar-y
+		width: 100%
+		border-radius none
+		background: $color3
+
+.hide-mobile
+	+below($media-size3)
+		display: none
+
+.main
+
+	float: left
+	width: calc(100% - 450px)
+	position: relative
+
+	+below($media-size1)
+		width: calc(100% - 225px)
+	+below($media-size3)
+		width: 100%
+
+	&_one-sidebar
+		width: calc(100% - 225px)
+		+below($media-size1)
+			width: 100%
+
+	&__content
+		font-size: 15px
+		margin-top: 25px
+		line-height: 1.6
+		color: $color10
+		p
+		hr
+			margin 25px 0
+		b
+			color: $color9
+		img
+			max-width: 100%
+
+	&__after-text
+		margin-top: 50px
+		padding-top: 25px
+		border-top: 1px solid $color12
+
+		&__title
+			margin-bottom: 7px
+
+		&__text
+			color: $color13
+
+	&__banner
+		display: block
+		margin 20px 0
+		img
+			display: block
+			width: 100%
+
+.two-col
+	letter-spacing: -.31em;
+	width: 103%;
+	margin: -1.5%;
+	&__item
+		width: 47%;
+		display: inline-block
+		letter-spacing: normal
+		margin: 1.5%
+		vertical-align: top
+		+below($media-size4)
+			width: 97%
+
+	.main__banner
+		margin: 1.5%
+
+.three-col
+	letter-spacing: -.31em;
+	width: 103%;
+	margin: -1.5%;
+	&__item
+		width: 30.33333333333333%;
+		display: inline-block
+		letter-spacing: normal
+		margin: 1.5%
+		vertical-align: top
+		.catalog_type1 &
+		.catalog_type2 &
+		.catalog_type4 &
+			+below($media-size1)
+				width: 47%
+		.catalog_type1 &
+		.catalog_type2 &
+		.catalog_type4 &
+			+below($media-size5)
+				width: 97%
+
+		.catalog_type3 &
+			+below($media-size1)
+				width: 21.999999999999996%
+		.catalog_type3 &
+			+below($media-size4)
+				width: 30.33333333333333%
+		.catalog_type3 &
+			+below($media-size6)
+				width: 47%
+
+
+
+	.main__banner
+		margin: 1.5%
+		+below($media-size1)
+			display: none
+
+.four-col
+	letter-spacing: -.31em;
+	width: 103%;
+	margin: -1.5%;
+	&__item
+		display: inline-block
+		letter-spacing: normal
+		vertical-align: top
+		width: 21.999999999999996%
+		margin: 1.5%;
+		+below($media-size4)
+			width: 30.33333333333333%
+		+below($media-size6)
+			width: 47%
+
+	.main__banner
+		margin: 1.5%
 
 .page
 	// Стили для body
@@ -24,12 +343,15 @@ html, body
 		height 50px
 
 	&__header
-		margin-bottom 50px
+		margin-bottom 20px
 
 	&__main
 		max-width $content-width
 		margin 0 auto
 		padding-bottom 60px
+		+below($media-size1)
+			m-padding()
+			overflow-x: hidden
 
 	&__bread-crumbs
 		//

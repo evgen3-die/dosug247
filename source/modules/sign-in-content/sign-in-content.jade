@@ -1,0 +1,12 @@
+mixin sign-in-content()
+	.sign-in-content
+		.sign-in-content__text Чтобы оставить отзыв, необходимо войти, используя свой логин и пароль
+		form.sign-in-content__form
+			.sign-in-content__form__input
+				+form-item(type="text", placeholder="Логин")
+			.sign-in-content__form__input
+				+form-item(type="text", placeholder="Пароль")
+			.sign-in-content__form__button
+				button(type="submit").button.button_block Вход
+			.sign-in-content__form__text или
+				a(href="#") Зарегистрироваться

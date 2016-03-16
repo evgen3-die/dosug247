@@ -1,0 +1,12 @@
+include ../dialog/write-message-block
+
+mixin write-to-block()
+	form.write-to-block
+		.main-form__item
+			.main-form__item__left Получатель:
+			.main-form__item__right
+				+form-item(type="text", value="Администрация сайта")
+		.main-form__item
+			.main-form__item__left Сообщение:
+			.main-form__item__right
+				+write-message-block()

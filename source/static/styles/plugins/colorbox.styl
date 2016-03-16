@@ -6,8 +6,6 @@
 	z-index 9999
 	top 0
 	left 0
-	overflow hidden
-
 
 #cboxOverlay
 	position fixed
@@ -22,6 +20,13 @@
 
 #cboxContent
 	position relative
+	padding: 10px
+	background: white
+	margin 120px 100px
+	+below($media-size1)
+		margin-top: 55px
+		margin-left: 50px
+		margin-right: 50px
 
 
 #cboxLoadedContent
@@ -127,18 +132,33 @@ $overlay-color = #000
 	// margin-bottom 17px
 
 #cboxTitle
-	color #000
-	font-size 14px
-	line-height 17px
-	height 34px
-	overflow hidden
+	overflow: hidden;
+	color: #333;
+	font-size: 18px;
+	text-align: center;
+	float: none !important;
+	position: absolute
+	left: 0
+	right: 0
+	top: 100%
+	background: white
+	padding: 10px
+	margin-top: 20px
+
+	.image-icon
+		margin-right: 10px
+		margin-bottom: -4px
 
 #cboxCurrent
 	position absolute
-	bottom 0px
-	left 100px
-	text-indent -9999px
-	color #999999
+	margin-bottom: 0
+	left: 0
+	right: 0
+	top: 100%
+	color #333
+	text-align: center
+	font-size: 18px
+	background: white
 
 #cboxLoadingOverlay
 	// background #ffffff url("../img/facebook-ajax-loader.gif") no-repeat 50% 50%
@@ -173,39 +193,46 @@ $overlay-color = #000
 #cboxPrevious
 #cboxNext
 	position absolute
-	top 0
-	// background-image url("../img/colorbox-gallery__arrows-sprite.png")
-	background-position 0 0
+	top: 50%
+	background-position top center
 	background-repeat no-repeat
-	width 34px
-	height 100%
+	width 28px
+	height 64px
 	opacity 0.7
-	transition all 0.2s ease-in-out 0s
+	transition opacity 0.2s ease-in-out 0s
 	text-indent -9999px
 	&:hover
 		opacity 1
+		background-position bottom center
+	&:focus
+		outline: none
 
 
 #cboxPrevious
-	left 0
-	background-position 10px 50%
+	left -80px
+	background-image: url(../img/product-page/popup-left.png)
+	+below($media-size1)
+		left: -35px
 
 
 #cboxNext
-	right 0
-	background-position -139px 50%
-
+	right -80px
+	background-image: url(../img/product-page/popup-right.png)
+	+below($media-size1)
+		right: -35px
 
 #cboxClose
 	position absolute
-	top 15px
-	right 15px
-	size 30px
-	background url("../img/cbox-close.png") 50% 50% no-repeat
-	text-indent -9999px
-	opacity 0.4
-
-#cboxClose:hover
-	opacity 1
-	text-decoration none
+	top -55px
+	right -55px
+	size 43px
+	// background url("../img/cbox-close.png") 50% 50% no-repeat
+	font-size: 0
+	background-image: url(../img/product-page/popup-close.png)
+	background-repeat: no-repeat
+	&:focus
+		outline none
+	+below($media-size1)
+		top: -45px
+		right: -45px
 

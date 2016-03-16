@@ -1,0 +1,43 @@
+.comments-list
+	&__item
+		& + &
+			margin-top: 20px
+		&__image
+			float: left
+			img
+				display: block
+				border-radius 50%
+		&__comment
+			margin-left: 78px
+			font-size: 16px
+			color: $color9
+			padding: 14px 17px;
+			border-radius: 2px;
+			position: relative
+			background-color: $color2
+			&:before
+				content: ''
+				position: absolute
+				top: 23px;
+				left: -3px;
+				width: 16px
+				height: 16px
+				background-color: $color2
+				transform: rotate(45deg)
+			&__bottom
+				margin-top: 3px;
+				+below($media-size6)
+					margin-top: 5px
+				&__item
+					font-size: 13px
+					font-weight: 700
+					display: inline-block
+					+below($media-size6)
+						display: block
+					.image-icon
+						margin-right: 7px
+					& + &
+						margin-left: 17px
+						+below($media-size6)
+							margin-left: 0
+

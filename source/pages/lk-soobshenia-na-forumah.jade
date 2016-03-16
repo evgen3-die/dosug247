@@ -1,0 +1,14 @@
+extends ../modules/layout/layout
+include ../modules/forum-messages-list/forum-messages-list
+
+block content
+	+sidebar-left-lk-2()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Сообщения на форумах"])
+		+page-title({"title": "Сообщения на форумах"})
+
+		+forum-messages-list()
+
+	.clear

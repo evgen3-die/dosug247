@@ -1,0 +1,127 @@
+.sidebar-left
+	width: 197px;
+	font-size: 15px
+	color: $color1
+	margin-right: 28px
+	float: left
+	margin-top: 7px
+
+	+above($media-size3)
+		display: block !important
+	+below($media-size3)
+		visibility: hidden
+		opacity: 0
+		transform: translateX(-217px)
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		z-index: 9999
+		background-color: $color4
+		margin-top: 0
+		padding: 10px
+		width: 217px
+		overflow-y: auto
+		shadow1()
+
+	&.active
+		+below($media-size3)
+			transform: translateX(0)
+			transition transform 0.2s ease-in-out 0s
+			visibility: visible
+			opacity: 1
+
+
+	&__scroll
+		max-height: 400px
+		overflow: hidden
+		margin-top: 30px
+		padding-right: 10px
+
+	&__item
+		margin: 10px 0;
+
+		&__link
+			margin-left: 15px
+			color: $color1
+			hover-opacity()
+			&
+			&:visited
+				text-decoration: none
+
+		&__num
+			display: inline-block
+			color: #fff
+			background-color: $color3
+			font-weight: 700
+			margin-left: 5px
+			padding: 0 6px
+			line-height: 18px
+			font-size: 14px
+			border-radius: 2px
+
+	&__header
+		color: $color7
+		font-size: 20px
+		font-weight: 700
+		padding-bottom: 8px
+
+
+	&__header.border
+		border-bottom: 2px solid $color3
+
+	&__title
+		color:  #333333;
+		font-size: 18px;
+		font-weight: 700;
+		margin-top: 60px;
+
+	a.sidebar-left__lk-title
+		hover-opacity()
+	&__lk-title
+		margin-top: 40px
+		padding: 7px 20px
+		font-weight: 700
+		display: block
+		font-size: 16px
+		background: $color6
+		border-bottom: 2px solid $color3
+		&
+		&:visited
+			color: $color7
+			text-decoration: none
+		.image-icon
+			margin-right: 10px
+			margin-bottom: -2px
+
+
+.sidebar-left-button
+	display: none
+	+below($media-size3)
+		display: block
+		width: 42px
+		height: 42px
+		position: fixed
+		left: 0
+		top: 50%
+		transform: translateX(0)
+		margin-top: -21px
+		background-image: url(../img/icons/sidebar-button.png)
+		background-position: center
+		background-repeat: no-repeat
+		background-color: $color3
+		z-index: 9999
+		cursor: pointer
+	&.active
+		+below($media-size3)
+			transform: translateX(217px)
+			transition transform 0.2s ease-in-out 0s
+			background-image: none
+			width: 32px
+		&:before
+			+below($media-size3)
+				display: inline-block
+				content: ""
+				border: 10px solid transparent
+				border-right: 9px solid #fff
+				margin-top: 10px

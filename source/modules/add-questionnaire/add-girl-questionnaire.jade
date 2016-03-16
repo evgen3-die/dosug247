@@ -1,0 +1,267 @@
+mixin add-girl-questionnaire()
+	.add-questionnaire
+		.add-questionnaire__left
+			.sidebar-left__title Заполните форму
+			.main-form__item
+				.main-form__item__left Ваш логин#[span.main-form__item__required *]:
+				.main-form__item__right
+					+form-item(type="text", placeholder="Название салона", errors=["Пожалуйста, заполните поле"])
+			.main-form__item
+				.main-form__item__left Телефон#[span.main-form__item__required *]:
+				.main-form__item__right
+					+form-item(type="text", placeholder="В формате +7 (xxx) xxx-xx-xx", errors=["Пожалуйста, заполните поле"])
+			.main-form__item
+				.main-form__item__left Возраст#[span.main-form__item__required *]:
+				.main-form__item__right
+					+form-item(type="text", mod=["valid", "small"], placeholder="лет", value="25")
+			.main-form__item
+				.main-form__item__left Рост:
+				.main-form__item__right
+					+form-item(type="text", mod=["valid", "small"], placeholder="см", value="170")
+			.main-form__item
+				.main-form__item__left Вес:
+				.main-form__item__right
+					+form-item(type="text", mod="small", placeholder="кг")
+			.main-form__item
+				.main-form__item__left Размер груди:
+				.main-form__item__right
+					+form-item(type="text", mod="small", placeholder="(1-12)")
+			.main-form__item
+				.main-form__item__left Цвет волос:
+				.main-form__item__right
+					-var data = ["Санкт-Петербург", "Москва", "Ижевск"]
+					+form-item(type="select", placeholder=" ", value=data, mod="valid")
+			.add-questionnaire__block.add-questionnaire__block_form
+				.main-form__item
+					.main-form__item__left Страна:
+					.main-form__item__right
+						-var data = ["Санкт-Петербург", "Москва", "Ижевск"]
+						+form-item(type="select", placeholder=" ", value=data, mod="valid")
+				.main-form__item
+					.main-form__item__left Город:
+					.main-form__item__right
+						-var data = ["Санкт-Петербург", "Москва", "Ижевск"]
+						+form-item(type="select", placeholder=" ", value=data, mod="valid")
+			.main-form__item
+				.main-form__item__left Станции метро#[span.main-form__item__required *]:
+				.main-form__item__right
+					+pseudo-dropdown-type2({
+						"list": [
+							{"title": "Автово"},
+							{"title": "Адмиралтейская"},
+							{"title": "Академическая"},
+							{"title": "Балтийская"},
+							{"title": "Бухарестская"},
+							{"title": "Василеостровская"},
+							{"title": "Владимирская"},
+							{"title": "Волковская"},
+							{"title": "Выборгская"},
+							{"title": "Горьковская"},
+							{"title": "Гостиный двор"},
+							{"title": "Гражданский проспект"},
+							{"title": "Девяткино"},
+							{"title": "Достоевская"},
+							{"title": "Елизаровская"},
+							{"title": "Звёздная"},
+							{"title": "Звенигородская"},
+							{"title": "Кировский завод"},
+							{"title": "Комендантский проспект"},
+							{"title": "Крестовский остров"},
+							{"title": "Купчино"},
+							{"title": "Ладожская"},
+							{"title": "Ленинский проспект"},
+							{"title": "Лесная"},
+							{"title": "Лиговский проспект"},
+							{"title": "Ломоносовская"},
+							{"title": "Маяковская"},
+							{"title": "Международная"},
+							{"title": "Московская"},
+							{"title": "Московские ворота"},
+							{"title": "Нарвская"},
+							{"title": "Невский проспект"},
+							{"title": "Новочеркасская"},
+							{"title": "Обводный канал"},
+							{"title": "Обухово"},
+							{"title": "Озерки"},
+							{"title": "Парк Победы"},
+							{"title": "Парнас"},
+							{"title": "Петроградская"},
+							{"title": "Пионерская"},
+							{"title": "Площадь Александра Невского 1"},
+							{"title": "Площадь Александра Невского 2"},
+							{"title": "Площадь Восстания"},
+							{"title": "Площадь Ленина"},
+							{"title": "Площадь Мужества"},
+							{"title": "Политехническая"},
+							{"title": "Приморская"},
+							{"title": "Пролетарская"},
+							{"title": "Проспект Большевиков"},
+							{"title": "Проспект Ветеранов"},
+							{"title": "Проспект Просвещения"},
+							{"title": "Пушкинская"},
+							{"title": "Рыбацкое"},
+							{"title": "Садовая"},
+							{"title": "Сенная площадь"},
+							{"title": "Спасская"},
+							{"title": "Спортивная"},
+							{"title": "Старая Деревня"},
+							{"title": "Технологический институт 1"},
+							{"title": "Технологический институт 2"},
+							{"title": "Удельная"},
+							{"title": "Улица Дыбенко"},
+							{"title": "Фрунзенская"},
+							{"title": "Чёрная речка"},
+							{"title": "Чернышевская"},
+							{"title": "Чкаловская"},
+							{"title": "Электросила"}],
+						"title": "Выберите станцию метро",
+						"hint": "Не более 3х станций метро",
+						"openned": true,
+						"valid": false,
+						"errors": ["Пожалуйста, выберите станции метро"]
+					})
+			.main-form__item
+				.main-form__item__left О себе#[span.main-form__item__required *]:
+				.main-form__item__right
+					+form-item(type="textarea")
+		
+		.add-questionnaire__right
+			.sidebar-left__title Основные услуги
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Секс классический")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Секс анальный")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Секс групповой")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Секс лесбийский")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Услуги семейной паре")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Минет в презервативе")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Минет без резинки")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Минет глубокий")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Минет в машине")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Куннилингус")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Игрушки")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Окончание на грудь")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Окончание на лицо")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Окончание в рот")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Cтриптиз профи")
+			
+			.sidebar-left__title Стриптиз
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Стриптиз не профи")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Лесби откровенное")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Лесби-шоу легкое")
+
+			.sidebar-left__title Экстрим
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Страпон")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Анилингус делаю")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Золотой дождь выдача")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Золотой дождь прием")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Копро выдача")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Фистинг анальный")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Фистинг классический")
+
+			.sidebar-left__title Разное
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Ролевые игры")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Фото/видео съемка")
+			.sidebar-left__item
+				+form-item(type="checkbox", label="Эскорт-услуги")
+				
+		.clear
+		hr.line2
+		.sidebar-left__title Укажите расценки
+		.main-form__item
+			.main-form__item__left Апартаменты
+			.main-form__item__right
+				.add-questionnaire__price
+					.add-questionnaire__price__item
+						b #[span.orange 1] час
+						+form-item(type="text", mod="small")
+						|  грн
+					.add-questionnaire__price__item
+						b #[span.orange 2] часа
+						+form-item(type="text", mod="small")
+						|  грн
+					.add-questionnaire__price__item
+						b Ночь
+						+form-item(type="text", mod="small")
+						|  грн
+		.main-form__item
+			.main-form__item__left Выезд
+			.main-form__item__right
+				.add-questionnaire__price
+					.add-questionnaire__price__item
+						b #[span.orange 1] час
+						+form-item(type="text", mod="small")
+						|  грн
+					.add-questionnaire__price__item
+						b #[span.orange 2] часа
+						+form-item(type="text", mod="small")
+						|  грн
+					.add-questionnaire__price__item
+						b Ночь
+						+form-item(type="text", mod="small")
+						|  грн
+		.main-form__item
+			.main-form__item__left Анал
+			.main-form__item__right
+				.add-questionnaire__price
+					.add-questionnaire__price__item
+						b #[span.orange 1] час
+						+form-item(type="text", mod="small")
+						|  грн
+					.add-questionnaire__price__item
+						b #[span.orange 2] часа
+						+form-item(type="text", mod="small")
+						|  грн
+					.add-questionnaire__price__item
+						b Ночь
+						+form-item(type="text", mod="small")
+						|  грн				
+		hr.line2
+		.sidebar-left__title Загрузите фотографии
+		.main-form__item
+			+form-item(type="file")
+		.main-form__item
+			em.
+				Возможна загрузка сразу несколько фото, удерживайте клавишу CTRL.<br>
+				Максимальный размер 1 фотографии - 2 МБ!
+		.add-questionnaire__block
+			.add-questionnaire__block__title Проверочная фотография
+			.add-questionnaire__block__left
+				+form-item(type="file")
+			.add-questionnaire__block__right
+				.main-form__item
+					em.
+						#[i.image-icon.hint] Ваше фото в полный рост, с листом A4 формата, на котором написана сегодняшняя дата. Ваше фото в полный рост, с листом A4 формата, на котором написана сегодняшняя дата.
+			.clear
+		hr.line2
+		.sidebar-left__title Загрузите видео
+		.main-form__item
+			+form-item(type="file")
+		hr.line2
+		.button.button_size_lg Сохранить анкету
+		

@@ -1,0 +1,41 @@
+include ../mixins/mixins
+include ../head/head
+include ../header/header
+include ../browsehappy/browsehappy
+include ../footer/footer
+include ../sidebar-left/sidebar-left
+include ../sidebar-left/sidebar-left-lk
+include ../sidebar-left/sidebar-left-lk-2
+include ../sidebar-right/sidebar-right
+include ../page-title/page-title
+include ../pagination/pagination
+include ../catalog/catalog-girls
+include ../catalog/catalog-girls-reduce
+include ../catalog/catalog-salon-my
+include ../bread-crumbs/bread-crumbs
+include ../product-slider/product-slider
+include ../comments-list/comments-list
+include ../sign-in-content/sign-in-content
+include ../add-banner/add-banner
+
+doctype html
+html(class="no-js" lang="ru")
+	head
+		+head(head.index)
+	
+	body
+		.page
+			+browsehappy(browsehappy)
+			
+			header.page__header
+				+header()
+				
+			main.page__main
+				block content
+			
+			footer.page__footer
+				+footer()
+		
+		//- Scripts
+		script(src='js/plugins.min.js')
+		script(src='js/main.min.js')

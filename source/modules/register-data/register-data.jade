@@ -1,0 +1,23 @@
+mixin register-data()
+	.register-data
+		.sidebar-left__title Основные данные
+		.register-data__item Электронная почта: #[b xburan2@mail.ru]<br>
+		.register-data__item Ник на сайте: #[b petr2018]
+		.sidebar-left__title Изменить город
+		.register-data__item
+			.register-data__item__select-col
+				-var data = ["Россия", "Москва", "Ижевск"]
+				+form-item(type="select", value=data)
+			.register-data__item__select-col
+				-var data = ["Москва", "Ижевск"]
+				+form-item(type="select", value=data)
+			.clear
+		.sidebar-left__title Аватар
+		.register-data__file
+			.register-data__file__left
+				img(src="img/message/default-image2.jpg", alt="")
+			.register-data__file__right
+				+form-item(type="file", mod="register-data")
+			.clear
+		hr.line2
+		button.button.button_size_lg Сохранить

@@ -1,0 +1,24 @@
+extends ../modules/layout/layout
+include ../modules/catalog/catalog-salon
+include ../modules/sidebar-left/sidebar-left-salon
+
+block content
+	+sidebar-left-salon()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Салоны"])
+		+page-title({"title": "Интим салоны"})
+		
+		+pagination({"pages": 7, "active": 1, "total": 15, "hideMobile": true})
+
+		+catalog-salon()
+		
+		+pagination({"pages": 7, "active": 1, "total": 15})
+		
+		a(href="#").main__banner
+			img(src="img/catalog/baner2.jpg", alt="Баннер")
+
+
+
+	.clear

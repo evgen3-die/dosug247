@@ -1,0 +1,82 @@
+include write-message-block
+
+mixin dialog()
+	.dialog
+		.dialog__date 15.04.15
+		.dialog__dialog-messages-list
+			.dialog-messages-list
+				.dialog-messages-list__item.dialog-messages-list__item_you
+					a(href="#").dialog-messages-list__item__portrait
+						.dialog-messages-list__item__portrait__image
+							img(src="img/message/message-image1.jpg", alt="Вы")
+						.dialog-messages-list__item__portrait__name Вы
+					.dialog-messages-list__item__content
+						.dialog-messages-list__item__content__inner(data-time="14:40") Привет!
+					.clear
+				.dialog-messages-list__item.dialog-messages-list__item_not-you
+					a(href="#").dialog-messages-list__item__portrait
+						.dialog-messages-list__item__portrait__image
+							img(src="img/message/default-image.jpg", alt="Елизавета")
+						.dialog-messages-list__item__portrait__name Елизавета
+					.dialog-messages-list__item__content
+						.dialog-messages-list__item__content__inner(data-time="14:41") Привет!
+					.clear
+				- for (var i = 0; i < 2; i++)
+					.dialog-messages-list__item.dialog-messages-list__item_you
+						a(href="#").dialog-messages-list__item__portrait
+							.dialog-messages-list__item__portrait__image
+								img(src="img/message/message-image1.jpg", alt="Вы")
+							.dialog-messages-list__item__portrait__name Вы
+						.dialog-messages-list__item__content
+							.dialog-messages-list__item__content__inner(data-time="14:40") Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной
+						.clear
+					.dialog-messages-list__item.dialog-messages-list__item_not-you
+						a(href="#").dialog-messages-list__item__portrait
+							.dialog-messages-list__item__portrait__image
+								img(src="img/message/default-image.jpg", alt="Елизавета")
+							.dialog-messages-list__item__portrait__name Елизавета
+						.dialog-messages-list__item__content
+							.dialog-messages-list__item__content__inner(data-time="14:41") Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной
+						.clear
+		.dialog__date 17.04.15
+		.dialog__dialog-messages-list
+			.dialog-messages-list
+				.dialog-messages-list__item.dialog-messages-list__item_you
+					a(href="#").dialog-messages-list__item__portrait
+						.dialog-messages-list__item__portrait__image
+							img(src="img/message/message-image1.jpg", alt="Вы")
+						.dialog-messages-list__item__portrait__name Вы
+					.dialog-messages-list__item__content
+						.dialog-messages-list__item__content__inner(data-time="14:40") Привет!
+					.clear
+				.dialog-messages-list__item.dialog-messages-list__item_not-you
+					a(href="#").dialog-messages-list__item__portrait
+						.dialog-messages-list__item__portrait__image
+							img(src="img/message/default-image.jpg", alt="Елизавета")
+						.dialog-messages-list__item__portrait__name Елизавета
+					.dialog-messages-list__item__content
+						.dialog-messages-list__item__content__inner(data-time="14:41") Привет!
+					.clear
+				- for (var i = 0; i < 2; i++)
+				.dialog-messages-list__item.dialog-messages-list__item_you
+					a(href="#").dialog-messages-list__item__portrait
+						.dialog-messages-list__item__portrait__image
+							img(src="img/message/message-image1.jpg", alt="Вы")
+						.dialog-messages-list__item__portrait__name Вы
+					.dialog-messages-list__item__content
+						.dialog-messages-list__item__content__inner(data-time="14:40") Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной
+					.clear
+				.dialog-messages-list__item.dialog-messages-list__item_not-you
+					a(href="#").dialog-messages-list__item__portrait
+						.dialog-messages-list__item__portrait__image
+							img(src="img/message/default-image.jpg", alt="Елизавета")
+						.dialog-messages-list__item__portrait__name Елизавета
+					.dialog-messages-list__item__content
+						.dialog-messages-list__item__content__inner.dialog-messages-list__item__content__inner_not-wiew(data-time="14:41") Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной
+					.clear
+		.dialog__write-message
+			a(href="#").dialog__write-message__image
+				img(src="img/message/message-image1.jpg", alt="Вы")
+			.dialog__write-message__block
+				+write-message-block()
+			.clear

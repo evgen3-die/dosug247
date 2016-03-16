@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/catalog/catalog-girls-numbered
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Отложенные индивидуалки"])
+		+page-title({"title": "Отложенные индивидуалки"})
+
+		+catalog-girls-numbered()
+		
+		
+
+	.clear

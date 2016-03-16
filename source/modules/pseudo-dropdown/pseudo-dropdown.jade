@@ -1,6 +1,9 @@
+include ../form-item/form-item
+
 mixin pseudo-dropdown(data)
 	.pseudo-dropdown
-		.pseudo-dropdown__trigger
+		.pseudo-dropdown__top
+			.pseudo-dropdown__trigger
 		.pseudo-dropdown__list
 			.pseudo-dropdown-list
 				ul
@@ -12,3 +15,88 @@ mixin pseudo-dropdown(data)
 							- classes.push(classes[0] + '_active')
 
 						li(class=classes, data-value="#{num}")= ent.title
+
+mixin pseudo-dropdown-type1(data)
+	.pseudo-dropdown.pseudo-dropdown_title
+		.pseudo-dropdown__top
+			if data.title
+				.pseudo-dropdown__title= data.title
+			.pseudo-dropdown__trigger
+		.pseudo-dropdown__list
+			
+			.pseudo-dropdown-list
+				ul
+					- var activeCounter = 0
+					each ent, num in data.list
+						- var classes = ['pseudo-dropdown-list__item']
+						if ent.active && activeCounter < 1
+							- activeCounter += 1
+							- classes.push(classes[0] + '_active')
+						
+						if (ent.bold)
+							- classes.push(classes[0] + '_bold')
+						li(class=classes, data-value="#{num}")= ent.title
+
+mixin pseudo-dropdown-type2(data)
+	-var pseudoDropdownClasses = ["pseudo-dropdown_title", "pseudo-dropdown_checkbox"]
+	-var baseClass = "pseudo-dropdown_checkbox"	
+	if (data.openned)
+		- pseudoDropdownClasses.push("pseudo-dropdown_checkbox-openned")
+	if (data.valid)
+		- pseudoDropdownClasses.push("pseudo-dropdown_checkbox-valid")
+	if (data.errors)
+		- pseudoDropdownClasses.push("pseudo-dropdown_checkbox-errors")	
+	.pseudo-dropdown(class=pseudoDropdownClasses)
+		.pseudo-dropdown__top
+			if data.title
+				.pseudo-dropdown__title= data.title
+			if data.triggerCheckbox	
+				.pseudo-dropdown__trigger-checkbox= data.triggerCheckbox
+		.pseudo-dropdown__list
+			if data.hint
+				.pseudo-dropdown__hint= data.hint
+					
+			.pseudo-dropdown-list
+				ul
+					- var activeCounter = 0
+					each ent, num in data.list
+						- var classes = ['pseudo-dropdown-list__item']
+						if ent.active && activeCounter < 1
+							- activeCounter += 1
+							- classes.push(classes[0] + '_active')
+
+						if (ent.bold)
+							- classes.push(classes[0] + '_bold')
+						li(class=classes, data-value="#{num}")
+							+form-item(type="checkbox", name="checkbox-group-1", id="#{num}", label=ent.title)
+		if (data.errors)
+			div(class=baseClass + "__helpers")
+				ul(class=baseClass + "__errors")
+					each ent, num in data.errors
+						li= ent				
+
+						
+mixin pseudo-dropdown-type3(data)
+	.pseudo-dropdown.pseudo-dropdown_title.pseudo-dropdown_checkbox.pseudo-dropdown_map
+		.pseudo-dropdown__top
+			if data.title
+				.pseudo-dropdown__title= data.title
+			if data.triggerCheckbox
+				.pseudo-dropdown__trigger-checkbox= data.triggerCheckbox
+		.pseudo-dropdown__list
+			if data.button
+				button.button.button_size_lg= data.button
+
+			.pseudo-dropdown-list
+				ul
+					- var activeCounter = 0
+					each ent, num in data.list
+						- var classes = ['pseudo-dropdown-list__item']
+						if ent.active && activeCounter < 1
+							- activeCounter += 1
+							- classes.push(classes[0] + '_active')
+
+						if (ent.bold)
+							- classes.push(classes[0] + '_bold')
+						li(class=classes, data-value="#{num}")
+							+form-item(type="checkbox", name="checkbox-group-1", id="#{num}", label=ent.title)

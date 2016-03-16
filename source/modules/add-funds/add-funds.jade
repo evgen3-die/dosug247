@@ -1,0 +1,50 @@
+mixin add-funds()
+	.main__content
+		p Пополнение баланса в автоматическом режиме. <br>
+			| Более 20 способов, включая: WebMoney, Qiwi, Яндекс.Деньги и так далее
+		p
+			a(href="#").button.button_size_lg Пополнить счет
+		hr.line2
+		h2 Активация пин-кода
+		form.main-form
+			.main-form__item
+				.main-form__item__left Введите пин-код:
+				.main-form__item__right.add-funds__input-wrap
+					.add-funds__input
+						+form-item(type="text")
+					.add-funds__button
+						button.button Активировать
+		hr.line2
+		h2 Чтобы пополнить баланс, необходимо приобрести пин код
+		
+		table.table.add-funds__table
+			thead
+				tr
+					td
+						b Эквивалент
+					td
+						b Цена
+					td
+					td
+						b Бонусы
+			tbody
+				each val in addFundsTable.data
+					tr
+						td= val.price
+						td
+							b= val.price
+							|  руб
+						td
+							a(href="#").orange Купить
+						td
+							if val.bonusPercent && val.bonusPrice
+								| Бонус #[b.orange #{val.bonusPercent}%]! Баланс увеличится на #[b #{val.bonusPrice}] руб.
+								
+		h3 Как пополнять баланс
+		p.
+			Выберите интересующий Вас номинал пин-кода и нажмите на ссылку «Купить».<br>
+			В новой вкладке откроется сайт платёжной системы.<br>
+			Следуйте инструкциям.<br>
+			После совершения оплаты, Вы будете направлены на страницу, на которой увидите 10-значный код:
+		p
+			img(src="img/content/code.jpg", alt="Код")

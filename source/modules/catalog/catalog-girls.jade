@@ -1,0 +1,108 @@
+mixin catalog-girls()
+	.three-col.catalog_type1
+		each val in ["img/catalog/girl2.jpg", "img/catalog/girl3.jpg", "img/catalog/girl5.jpg"]
+			.three-col__item
+				.catalog-item.catalog-item_checked
+					a(href="#").catalog-item__image
+						img(src=val, alt="")
+					.catalog-item__bottom
+						.catalog-item__name Дианка
+						.catalog-item__tel +7 916 
+							b 15 65 153
+						.catalog-item__metro
+							i.image-icon.metro
+							| Проспект просвещения
+						.catalog-item__text Молодая и страстная брюнетка. Люблю делать минет без Молодая и страстная брюнетка. Люблю делать минет без
+					.catalog-item__hidden
+						.catalog-item__parameters
+							.catalog-item__parameters__block
+								table.catalog-item__parameters__table
+									tr
+										td Возраст:
+										td 27
+									tr
+										td Рост:
+										td 169
+									tr
+										td Вес:
+										td 54
+									tr
+										td Грудь:
+										td 4
+							.catalog-item__parameters__block
+								table.catalog-item__parameters__table
+									tr
+										td Час:
+										td
+											b 2000
+									tr
+										td 2 часа:
+										td
+											b 6000
+									tr
+										td Ночь:
+										td
+											b 15000
+						.catalog-item__reviews
+							i.image-icon.speech-bubble
+							| Отзывы 
+							em (4)
+						.catalog-item__video
+							i.image-icon.video
+							| Есть видео
+							a(href="#").catalog-item__video__link Подробнее
+		a(href="#").main__banner
+			img(src="img/catalog/baner2.jpg", alt="Баннер")
+		each val in [1, 2, 3]
+			each val in ["img/catalog/girl6.jpg", "img/catalog/girl8.jpg", "img/catalog/girl9.jpg"]
+				.three-col__item
+					.catalog-item.catalog-item_checked
+						a(href="#").catalog-item__image
+							img(src=val, alt="")
+						.catalog-item__bottom
+							.catalog-item__name Дианка
+							.catalog-item__tel +7 916 
+								b 15 65 153
+							.catalog-item__metro
+								i.image-icon.metro
+								| Проспект просвещения
+							.catalog-item__text Молодая и
+						.catalog-item__hidden
+							.catalog-item__parameters
+								.catalog-item__parameters__block
+									table.catalog-item__parameters__table
+										tr
+											td Возраст:
+											td 27
+										tr
+											td Рост:
+											td 169
+										tr
+											td Вес:
+											td 54
+										tr
+											td Грудь:
+											td 4
+								.catalog-item__parameters__block
+									table.catalog-item__parameters__table
+										tr
+											td Час:
+											td
+												b 2000
+										tr
+											td 2 часа:
+											td
+												b 6000
+										tr
+											td Ночь:
+											td
+												b 15000
+							.catalog-item__reviews
+								i.image-icon.speech-bubble
+								| Отзывы 
+								em (4)
+							.catalog-item__video
+								i.image-icon.video
+								| Есть видео
+								a(href="#").catalog-item__video__link Подробнее
+			

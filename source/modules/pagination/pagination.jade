@@ -1,5 +1,11 @@
 mixin pagination(data)
-	nav.pagination
+	- var classes = []
+	if data.center
+		- classes.push("pagination_center")
+	if data.hideMobile
+		- classes.push("hide-mobile")
+		
+	nav.pagination(class=classes)
 		ul
 			if data.arrows
 				li.pagination__item.pagination__arrow.pagination__arrow_prev

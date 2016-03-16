@@ -11,13 +11,21 @@ h6
 
 
 h1
-	font-size 2.6em
+	font-size: 23px
+	font-weight: 400
+	+below($media-size3)
+		font-size: 21px
 
 h2
-	font-size 2.3em
+	font-size 20px
+	font-weight: 400
+	margin-top: 25px
+	margin-bottom: 25px
 
 h3
-	font-size 2em
+	font-size: 17px
+	font-weight: 400
+	margin-top: 60px
 
 h4
 	font-size 1.8em
@@ -134,12 +142,12 @@ table
 	width 100%
 
 .table
-	margin $base-line-height 0
+	margin 25px 0
 	border-collapse collapse
 	border-spacing 0
 	empty-cells show
-	border 1px solid $table-border-color
 	font-size 14px
+	background-color: $color6
 
 	caption
 		color $table-font-color
@@ -151,27 +159,32 @@ table
 
 	td
 	th
-		border-left 1px solid $table-border-color
-		border-width 0 0 0 1px
+		border-top 1px solid white
+		border-bottom: 1px solid white
 		font-size inherit
 		margin 0
 		overflow visible
-		padding 0.5em 1em
+		padding: 6px 15px
 		font-weight normal
-		&:first-child
-			border-left-width 0
+		+below($media-size4)
+			padding-left: 7px
+			padding-right: 7px
+	td + td
+		border-left: 1px solid white
 
 	thead
 	tfoot
-		background-color $table-back-color
 		color $table-font-color
 		text-align left
 		vertical-align bottom
-		if $table-head-border-color
-			td
-			th
-				border-color $table-head-border-color
+		border-bottom: 2px solid $color3;
 
+	tbody
+		font-size: 16px
+		+below($media-size4)
+			font-size: 14px
+	thead
+		vertical-align: middle
 
 	td
 		background-color transparent
@@ -216,28 +229,37 @@ table
 			display block
 
 		tbody
+			tr
+				border 1px solid white
 			td
 				border none
 				display block
 				vertical-align top
 
-				&:before
-					content attr(data-th) ": "
+				&[data-th]:before
+					content attr(data-th) ' :'
 					font-weight bold
-					width 6.5em
-					display inline-block
+					width: 100px
+					display: block
+					float: left
+					text-align: left
+
+				&:not([data-th])
+					padding-left: 117px
 
 				&.table__hide
 					display none
 
 				& .table__content
 					vertical-align top
+					margin-left: 110px
+					display: block
 
-				&:first-child
+				/*&:first-child
 					padding-top 1.5em
 
 				&:last-child
-					padding-bottom 1.5em
+					padding-bottom 1.5em*/
 
 
 		.table__wrapper_active

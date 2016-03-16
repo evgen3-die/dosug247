@@ -1,6 +1,12 @@
 .pagination
-	m-cf()
-	text-align center
+	// m-cf()
+	text-align left
+	line-height: 1
+	margin: 21px 0px;
+	&_center
+		text-align: center
+	+below($media-size5)
+		text-align: center
 	+ul-reset()
 		display inline-block
 		font-size 0
@@ -12,15 +18,15 @@
 		vertical-align middle
 		font-size 16px
 		font-weight 300
+		text-align: center
 
 	&__link
 		&
 		&:visited
-			color #505050
-			padding 8px
-			size 16px
+			color $color7
+			padding 3px
+			size 22px
 			display block
-			text-decoration none
 			line-height 1
 
 		&:hover
@@ -40,8 +46,11 @@
 		svg
 			fill #d2d2d2
 			svgSize($chevron-right)
-
+	&__item_active
+		background: $color3
+		border-radius: 2px
 	&__item_active &__link
 		&
 		&:visited
-			color #f05050
+			color white
+			text-decoration: none

@@ -4,25 +4,156 @@ include ../main-menu/main-menu
 include ../github-button/github-button
 include ../header-presentation/header-presentation
 include ../mobile-menu-trigger/mobile-menu-trigger
+include ../pseudo-dropdown/pseudo-dropdown
+include ../form-item/form-item
+include ../header-menu/header-menu
 
 mixin header(data)
 	header.header
+		.header__banner
+			.header__inner
+				a(href="#")
+					img(src="img/header/banner.jpg", alt="Баннер")
 		.header__top
 			.header__inner
 				.header__logo
 					+logo()
-				
-				.header__menu
-					+main-menu(mainMenu.default)
+				.header__dropdown-wrap
+					.header__dropdown.header__dropdown_city
+						+pseudo-dropdown-type1({
+							"list": [
+								{
+									"title": "Москва",
+									"bold": true
+								},
+								{
+									"title": "Санкт-Петербург",
+									"active": true,
+									"bold": true
+								},
+								{"title": "Абакан"},
+								{"title": "Анадырь"},
+								{"title": "Архангельск"},
+								{"title": "Астрахань"},
+								{"title": "Барнаул"},
+								{"title": "Белгород"},
+								{"title": "Биробиджан"},
+								{"title": "Благовещенск"},
+								{"title": "Брянск"},
+								{"title": "Великий Новгород"},
+								{"title": "Владивосток"},
+								{"title": "Владикавказ"},
+								{"title": "Владимир"},
+								{"title": "Волгоград"},
+								{"title": "Вологда"},
+								{"title": "Воронеж"},
+								{"title": "Горно-Алтайск"},
+								{"title": "Грозный"},
+								{"title": "Екатеринбург"},
+								{"title": "Иваново"},
+								{"title": "Ижевск"},
+								{"title": "Иркутск"},
+								{"title": "Йошкар-Ола"},
+								{"title": "Казань"},
+								{"title": "Калининград"}],
+							"title": "Город:"
+						})
+					.header__dropdown.header__dropdown_metro
+						+pseudo-dropdown-type2({
+							"list": [
+								{"title": "Автово"},
+								{"title": "Адмиралтейская"},
+								{"title": "Академическая"},
+								{"title": "Балтийская"},
+								{"title": "Бухарестская"},
+								{"title": "Василеостровская"},
+								{"title": "Владимирская"},
+								{"title": "Волковская"},
+								{"title": "Выборгская"},
+								{"title": "Горьковская"},
+								{"title": "Гостиный двор"},
+								{"title": "Гражданский проспект"},
+								{"title": "Девяткино"},
+								{"title": "Достоевская"},
+								{"title": "Елизаровская"},
+								{"title": "Звёздная"},
+								{"title": "Звенигородская"},
+								{"title": "Кировский завод"},
+								{"title": "Комендантский проспект"},
+								{"title": "Крестовский остров"},
+								{"title": "Купчино"},
+								{"title": "Ладожская"},
+								{"title": "Ленинский проспект"},
+								{"title": "Лесная"},
+								{"title": "Лиговский проспект"},
+								{"title": "Ломоносовская"},
+								{"title": "Маяковская"},
+								{"title": "Международная"},
+								{"title": "Московская"},
+								{"title": "Московские ворота"},
+								{"title": "Нарвская"},
+								{"title": "Невский проспект"},
+								{"title": "Новочеркасская"},
+								{"title": "Обводный канал"},
+								{"title": "Обухово"},
+								{"title": "Озерки"},
+								{"title": "Парк Победы"},
+								{"title": "Парнас"},
+								{"title": "Петроградская"},
+								{"title": "Пионерская"},
+								{"title": "Площадь Александра Невского 1"},
+								{"title": "Площадь Александра Невского 2"},
+								{"title": "Площадь Восстания"},
+								{"title": "Площадь Ленина"},
+								{"title": "Площадь Мужества"},
+								{"title": "Политехническая"},
+								{"title": "Приморская"},
+								{"title": "Пролетарская"},
+								{"title": "Проспект Большевиков"},
+								{"title": "Проспект Ветеранов"},
+								{"title": "Проспект Просвещения"},
+								{"title": "Пушкинская"},
+								{"title": "Рыбацкое"},
+								{"title": "Садовая"},
+								{"title": "Сенная площадь"},
+								{"title": "Спасская"},
+								{"title": "Спортивная"},
+								{"title": "Старая Деревня"},
+								{"title": "Технологический институт 1"},
+								{"title": "Технологический институт 2"},
+								{"title": "Удельная"},
+								{"title": "Улица Дыбенко"},
+								{"title": "Фрунзенская"},
+								{"title": "Чёрная речка"},
+								{"title": "Чернышевская"},
+								{"title": "Чкаловская"},
+								{"title": "Электросила"}],
+							"title": "Метро:",
+							"hint": "Можно выбрать несколько",
+							"triggerCheckbox": "Все станции"
+						})
 
-				.header__github
-					+github-button()
-						
-				.header__mobile-menu-trigger
-					+mobile-menu-trigger()
+				.header__login
+					form
+						.header__login__top
+							.header__login__top__input
+								+form-item(type="text")
+							.header__login__top__input
+								+form-item(type="text")
+							.header__login__top__button
+								button(type="submit").button.button_block Вход
+							.clear
+						.header__login__bottom
+							.header__login__bottom__enter
+								a(href="#").header__login__bottom__enter-link Вход
+								.header__login__bottom__divider
+							a(href="#").header__login__bottom__register-link Регистрация
+							.header__login__bottom__password
+								.header__login__bottom__divider
+								a(href="#") Восстановить пароль
 
 				.clear
 
 		.header__bottom
 			.header__inner
-				+header-presentation(data)
+				+header-menu()

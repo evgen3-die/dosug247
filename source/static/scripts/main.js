@@ -34,9 +34,12 @@ Modernizr.load([
 
 
 $(document).ready(function() {
-	$('select, input').styler();
 
-	$('.content-wrapper table').basictable({baseClass: 'table'});
+	$('select, input').styler({
+		fileBrowse: 'Выберите файл'
+	});
+
+	$('.add-funds__table').basictable({baseClass: 'table'});
 
 	// Here insert modules scripts
 	//= require ../../../tmp/modules.js

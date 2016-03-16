@@ -1,0 +1,26 @@
+extends ../modules/layout/layout
+include ../modules/article-list/article-list
+
+block content
+	+sidebar-right()
+
+	main.main.main_one-sidebar
+		+bread-crumbs(["Главная", "Полезные статьи"])
+		+page-title({"title": "Полезные статьи"})
+		+pagination({"pages": 7, "active": 1, "total": 15, "hideMobile": true})
+
+		.article-title Проститутки Питера
+		+article-list({items: 6})
+		
+		.article-title Досуг в Питере
+		+article-list({items: 2})
+		
+		.article-title Эротический массаж
+		+article-list({items: 1})
+		
+		.article-title Интим Питера
+		+article-list({items: 6})
+
+		+pagination({"pages": 7, "active": 1, "total": 15})
+
+	.clear

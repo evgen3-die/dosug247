@@ -1,0 +1,16 @@
+mixin catalog-girls-reduce()
+	.four-col
+		each val in [1, 2, 3, 4, 5, 6]
+			each val in ["img/catalog/girl6.jpg", "img/catalog/girl8.jpg", "img/catalog/girl9.jpg", "img/catalog/girl3.jpg"]
+				.four-col__item
+					a(href="#").girl-reduce
+						img(src=val, alt="Мариша").girl-reduce__image
+						.girl-reduce__text
+							.girl-reduce__name
+								b Елизавета, 
+								| 24 года
+							.girl-reduce__phone
+								i.phone.image-icon
+								| +7 916 
+								b 43 56 123
+		

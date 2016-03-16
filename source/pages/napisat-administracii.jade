@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/write-to-block/write-to-block
+
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Написать администрации"])
+		+page-title({"title": "Написать администрации"})
+		
+		+write-to-block()
+					
+
+	.clear

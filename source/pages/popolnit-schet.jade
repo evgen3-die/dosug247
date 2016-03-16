@@ -1,0 +1,17 @@
+extends ../modules/layout/layout
+include ../modules/add-funds/add-funds
+
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Пополнить счет"])
+		+page-title({"title": "Пополнить счет"})
+		
+		+add-funds()
+
+
+
+	.clear

@@ -4,27 +4,18 @@
 // Чекбоксы
 .jq-checkbox
 	vertical-align middle
-	width 18px
-	height 18px
+	border-radius: 2px
+	background-color:  #f6e5c7
+	width: 16px
+	height: 16px
 	margin 0 4px 0 0
-	border 1px solid #C3C3C3
 	cursor pointer
 
 	&.checked
-		.jq-checkbox__div
-			width 18px
-			height 18px
-			&:before
-				position absolute
-				top 4px
-				left 4px
-				content ''
-				display block
-				border-left 3px solid #08C
-				border-bottom 3px solid #08C
-				width 7px
-				height 4px
-				transform rotate(-45deg)
+		background-image: url(../img/check.png)
+		background-position: center
+		background-repeat: no-repeat
+
 
 	&.focused
 		border: 1px solid #08C
@@ -60,7 +51,8 @@
 // Файл
 .jq-file
 	width 100%
-	border-radius 4px
+	&:hover &__browse
+		opacity: .75
 	input
 		height auto
 		line-height 1em
@@ -70,42 +62,41 @@
 		overflow hidden
 		box-sizing border-box
 		width 100%
-		height 40px
-		line-height 40px
-		padding 0 80px 0 10px
-		border 1px solid #CCC
-		border-radius 4px
-		background #FFF
-		box-shadow inset 1px 1px #F1F1F1
-		font-size 14px
+		padding: 6px 10px 6px 166px
+		font-size 13px
 		color #333
 		white-space nowrap
 		text-overflow ellipsis
+		+below($media-size3)
+			padding-left: 145px
 
 	&__browse
 		position absolute
-		top 1px
-		right 1px
-		padding 0 10px
-		border-left 1px solid #CCC
-		border-radius 0 4px 4px 0
-		font-size 14px
-		background #fff - 2%
-		line-height 38px
-		color #333
-		text-shadow 1px 1px #FFF
+		top 2px
+		left 0
+		padding: 4px 15px
+		padding-left: 32px
+		border-radius 4px
+		font-size 13px
+		color white
+		background-color: $color3
+		background-image: url(../img/icons/clip.png)
+		background-repeat: no-repeat
+		background-position: 8px center
+		transition opacity 0.2s ease-in-out 0s
+
 
 	&:hover
 		.jq-file__browse
-			background #fff - 5%
+			// background #fff - 5%
 
 	&:active
 		.jq-file__browse
-			background #F5F5F5
+			// background #F5F5F5
 
 	&.focused
 		.jq-file__name
-			border 1px solid #5794BF
+			// border 1px solid #5794BF
 
 	&.disabled
 		.jq-file__name
@@ -213,6 +204,7 @@
 	width 100%
 	vertical-align middle
 	cursor pointer
+
 	.placeholder
 		color #888
 
@@ -222,7 +214,7 @@
 
 	li
 		min-height 18px
-		padding 5px 10px 6px
+		padding 5px 18px 6px
 		-webkit-user-select none
 		-moz-user-select none
 		-ms-user-select none
@@ -230,13 +222,11 @@
 		white-space nowrap
 		color #231F20
 
-		.selected
-			background-color #A3ABB1
-			color #FFF
+		&.sel
+			background-color: $color2
 
 		&:hover
-			background-color: #08C
-			color #FFF
+			background-color: $color2
 
 		.disabled
 			color #AAA
@@ -254,22 +244,17 @@
 			padding-left 25px
 
 	&__select
-		height 40px
-		padding 0 45px 0 10px
-		border 1px solid #CCC
-		border-radius 4px
-		background #fff
-		font-size 14px
-		line-height 40px
+		padding: 5px 30px 5px 18px
+		border1()
+		font-size 13px
 		color #333
-		text-shadow 1px 1px #FFF
+		background: $color4
 
 		&:hover
 			background #fff - 2%
 
 		&:active
 			background #F5F5F5
-			box-shadow inset 1px 1px 3px #DDD
 
 	.focused
 		.jq-selectbox__select
@@ -291,6 +276,7 @@
 		width 100%
 		white-space nowrap
 		text-overflow ellipsis
+		min-height: 17px
 
 	&__trigger
 		position absolute
@@ -305,7 +291,7 @@
 		right 12px
 		width 0
 		height 0
-		triangle(down, 4px, #999)
+		triangle(down, 4px, $color3)
 
 	&:hover
 		.jq-selectbox__trigger-arrow
@@ -316,11 +302,9 @@
 		width 100%
 		margin 2px 0 0
 		padding 0
-		border 1px solid #CCC
-		border-radius 4px
+		border1()
 		background #FFF
-		box-shadow 0 2px 10px rgba(0,0,0,.2)
-		font-size 14px
+		font-size 13px
 		line-height 18px
 
 	&__search

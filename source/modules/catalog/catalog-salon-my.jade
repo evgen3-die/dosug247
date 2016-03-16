@@ -1,0 +1,94 @@
+mixin catalog-salon-my()
+	.three-col.catalog_type2
+		each val in [1, 2]
+			.three-col__item
+				.catalog-item.catalog-item_salon
+					a(href="#").catalog-item__image
+						img(src="img/catalog/salon1.jpg", alt="")
+						
+					.catalog-item__bottom
+						.catalog-item__name Cалон Райские птички
+						.catalog-item__tel(data-views="350") +7 916 
+							b 15 65 153
+						.catalog-item__metro
+							i.image-icon.metro
+							| Проспект просвещения
+					.catalog-item__controls
+						.catalog-item__controls__left
+							.catalog-item__controls__item
+								i.image-icon.enabled
+								| Включено
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.change
+									| Изменить	
+						.catalog-item__controls__right
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.stop
+									| Стоп
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.delete
+									| Удалить
+			
+			
+			.three-col__item
+				.catalog-item.catalog-item_salon.catalog-item_disabled
+					a(href="#").catalog-item__image
+						img(src="img/catalog/salon1.jpg", alt="")
+	
+					.catalog-item__bottom
+						.catalog-item__name РАЙСКИЙ САД
+						.catalog-item__tel(data-views="250") +7 916 
+							b 15 65 153
+						.catalog-item__metro
+							i.image-icon.metro
+							| Проспект просвещения
+					.catalog-item__controls
+						.catalog-item__controls__left
+							.catalog-item__controls__item
+								i.image-icon.disabled
+								| Отключено
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.change
+									| Изменить	
+						.catalog-item__controls__right
+							.catalog-item__controls__item
+								a(href="#").catalog-item__controls__start Старт
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.delete
+									| Удалить
+								
+			.three-col__item
+				.catalog-item.catalog-item_salon
+					a(href="#").catalog-item__image
+						img(src="img/catalog/salon2.jpg", alt="")
+	
+					.catalog-item__bottom
+						.catalog-item__name ROYAL
+						.catalog-item__tel(data-views="1") +7 916 
+							b 15 65 153
+						.catalog-item__metro
+							i.image-icon.metro
+							| Проспект просвещения
+					.catalog-item__controls
+						.catalog-item__controls__left
+							.catalog-item__controls__item
+								i.image-icon.enabled
+								| Включено
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.change
+									| Изменить	
+						.catalog-item__controls__right
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.stop
+									| Стоп
+							.catalog-item__controls__item
+								a(href="#")
+									i.image-icon.delete
+									| Удалить					

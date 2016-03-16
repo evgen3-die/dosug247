@@ -1,0 +1,170 @@
+.product-page
+	margin-top: 23px
+	&__left
+		width: 36%
+		float: left
+		+below($media-size4)
+			float: none
+			width: auto
+		&__video
+			width: 100%
+		.product-page__map-wrap
+		.product-page__video-wrap
+			+below($media-size4)
+				display: none
+	&__right
+		> *:first-child
+		> *:first-child.sidebar-left__header
+			margin-top: 0
+			margin-bottom: 0
+		margin-left: 36%
+		padding-left: 32px
+		+below($media-size4)
+			margin-left: 0
+			padding-left: 0
+			margin-top: 60px
+		.product-page__map-wrap
+		.product-page__video-wrap
+			display: none
+		.product-page__map-wrap
+		.product-page__video-wrap
+			+below($media-size4)
+				display: block
+		&__table-price
+			margin: 25px 0
+		&__preferences
+			overflow: hidden
+			&__left
+			&__right
+				float: left
+				width: 50%
+				+below($media-size6)
+					float: none
+					width: auto
+			&__right
+				padding-left: 34px
+				+below($media-size6)
+					padding-left: 0
+					margin-top: 35px
+			&__title
+				font-size: 18px
+				color: $color9
+				font-weight: 700
+				margin-bottom: 12px
+			* + &__title
+				margin-top: 35px
+			&__item
+				margin: 6px 0
+				font-size: 15px
+				.preference-yes
+					margin-left: 4px
+					margin-right: 9px
+				.preference-no
+					margin-left: 4px
+					margin-right: 10px
+				a
+					text-decoration: none
+				del
+					color #ad9f8e
+					margin-left: -4px
+	.sidebar-left__header
+		margin-top: 60px
+		margin-bottom: 15px
+		&__phone
+			float: right
+			font-size: 18px
+			font-weight: 400
+			color: $color10
+
+.product-table
+	width: 100%
+	font-size: 16px
+	color: $color9
+	position: relative
+	.image-icon.metro
+		vertical-align: middle
+		margin-bottom: 3px
+		margin-right: 5px
+	a
+		&
+		&:visited
+			color: $color9
+	tr
+		//
+	td
+		padding 8px 0
+		position: relative
+		vertical-align: top
+		b
+			color: $color3
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-image: url(../img/line2.png)
+	td:first-child
+		color: $color10
+		width: 220px
+		+below($media-size3)
+			width: auto
+			padding-right: 20px
+	tr:last-child td
+		&:after
+			display: none
+	& &__outer-link
+	& &__outer-link:visited
+		color: $color3
+.product-table-price
+	width: 100%
+	font-size: 16px
+	color: $color9
+	background-color: $color6
+	+below($media-size6)
+		font-size: 13px
+	td
+		padding 8px 0
+		position: relative
+		vertical-align: top
+		b
+			color: $color3
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-image: url(../img/line2.png)
+
+
+	td:first-child
+		color: $color10
+		width: 220px
+		padding-left: 20px
+		+below($media-size3)
+			width: auto
+		+below($media-size6)
+			padding-left: 5px
+		b
+			color: $color7
+			font-size: 20px
+
+	tr:last-child td
+		&:after
+			display: none
+
+	tr:first-child
+		td
+			vertical-align: middle
+			+below($media-size6)
+				vertical-align: baseline
+			&:after
+				height: 2px
+				background-image: none
+				background-color: $color3
+
+
+

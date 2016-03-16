@@ -1,0 +1,56 @@
+.forum-messages-list
+	&__item
+		padding 15px 10px
+		padding-left: 55px
+		background: $color11
+		background-image: url(../img/icons/forum-message.png)
+		background-position: 15px 17px
+		background-repeat: no-repeat
+		shadow1()
+		& + &
+			margin-top: 10px
+		+below($media-size5)
+			padding: 10px
+			background-image: none
+		> a
+			text-decoration: none
+			display: block
+			hover-opacity()
+		&__message
+			font-size: 16px
+			line-height: 1.2
+			color: $color1
+			a
+			a:visited
+				font-weight: 700
+				text-decoration: none
+				hover-opacity()
+		&__text
+			font-size: 14px
+			color: $color13
+			margin-top: 4px
+			a
+			a:visited
+				color: $color9
+		&__bottom
+			font-size: 12px
+			margin-top: 7px
+		&__date
+			display: inline-block
+			color: $color14
+		&__divider
+			display: inline-block
+			margin: 0 6px
+		&__name
+			display: inline-block
+			color: $color9
+			font-weight: 700
+
+	&_topic-list
+		.forum-messages-list
+			&__item
+				background-image: url(../img/icons/forum-topic.png)
+				+below($media-size5)
+					background-image: none
+				&__text
+					color: $color10

@@ -1,0 +1,68 @@
+.article-item
+	shadow1()
+	background-color: $color6
+	padding-right: 20px
+	+below($media-size3)
+		padding-right: 10px
+	+below($media-size6)
+		padding-bottom: 10px
+	&__link
+		display: block
+		hover-opacity()
+		&
+		&:visited
+		&:hover
+			color: $color3
+		&__text
+			font-size: 16px
+			padding-top: 20px
+			white-space: nowrap
+			text-overflow: ellipsis
+			overflow: hidden
+			line-height: 1.2
+			+below($media-size3)
+				height: 55px
+				white-space: normal
+				font-size: 14px
+			+below($media-size4)
+				height: 26px
+				padding-top: 10px
+				white-space: nowrap
+			+below($media-size6)
+				height: auto
+				white-space: normal
+
+	&__image
+		float: left
+		+below($media-size3)
+			width: 160px
+		+below($media-size6)
+			display: none
+	&__text
+		line-height: 1.3
+		margin-top: 4px
+		height: 36px
+		overflow: hidden
+		+below($media-size3)
+			display: none
+		+below($media-size4)
+			display: block
+		+below($media-size6)
+			height: auto
+	.forum-reduce-list__item__bottom__item
+		font-size: 12px
+		margin-top: 13px
+	&__link__text
+	&__text
+	.forum-reduce-list__item__bottom__item
+		margin-left: 220px
+		display: block
+		+below($media-size3)
+			margin-left: 170px
+		+below($media-size6)
+			margin-left: 10px
+.article-title
+	font-size: 17px
+	font-weight: 700
+	margin-top: 30px
+	margin-bottom: 10px

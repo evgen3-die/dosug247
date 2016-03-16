@@ -1,0 +1,646 @@
+.main__catalog
+	margin: 18px 0
+.catalog-item-counter
+	counter-reset: item
+	.catalog-item:before
+		position: absolute;
+		content: counter(item)
+		counter-increment: item
+		color: #fff
+		left: 8px
+		top: 8px
+		font-size: 23px
+		width: 45px
+		height: 45px
+		text-align: center
+		border-radius: 50%
+		background: $color3
+		line-height: 45px
+		z-index: 10
+.catalog-item
+	&_checked &__bottom
+		position: relative
+		z-index: 1
+		.catalog_type1 &
+		.catalog_type2 &
+			+below($media-size1)
+				position: static
+		&:before
+			content: ''
+			position: absolute
+			top: -1px;
+			right: 5px;
+			background-image: url(../img/catalog/check.png)
+			width: 67px
+			height: 67px
+			z-index: -1
+			+below($media-size1)
+				opacity: .4
+			.catalog_type1 &
+				+below($media-size4)
+					top: 60px
+					right: auto
+					left: 50%
+					margin-left: 18%
+			.catalog_type1 &
+				+below($media-size4)
+					top: 72px
+					margin-left: 44px
+					left: 50%
+	&:visited
+		color: $color9
+	shadow1()
+	text-decoration: none
+	color: $color9
+	display: block
+	position: relative
+	line-height: 1.2
+	background-color: $color6
+
+	.catalog_type1 &
+	.catalog_type2 &
+		+below($media-size1)
+			margin-top: 44px
+			box-shadow none
+			background-color: transparent
+
+
+
+	&__name
+	&__tel
+	&__metro
+	&__text
+	&__parameters__block
+	&__reviews
+	&__video
+	&__vip
+	&__description
+	&__link-block
+		padding-left: 10px
+		padding-right: 10px
+		.catalog_type1 &
+			+below($media-size1)
+				padding-left: 0
+				padding-right: 0
+	&_salon
+		.catalog-item__name
+		.catalog-item__tel
+		.catalog-item__metro
+		.catalog-item__text
+		.catalog-item__parameters__block
+		.catalog-item__reviews
+		.catalog-item__video
+		.catalog-item__controls
+		.catalog-item__parameters
+			padding-left: 15px
+			padding-right: 15px
+			.catalog_type3 &
+				+below($media-size1)
+					padding-left: 10px
+					padding-right: 10px
+		.catalog-item__image
+			padding: 15px
+			padding-bottom: 0
+			.catalog_type1 &
+			.catalog_type2 &
+			.catalog_type3 &
+				+below($media-size1)
+					padding: 0
+
+		.catalog-item__parameters
+			padding-top: 5px
+			padding-bottom: 5px
+		.catalog_type2 & .catalog-item__name
+			+below($media-size1)
+				padding-left: 0
+				padding-right: 0
+
+
+
+
+	&__close
+		position: absolute
+		width: 19px
+		height: 19px
+		background-image: url(../img/icons/close.png)
+		background-repeat: no-repeat
+		right: 8px
+		top: 8px
+		z-index: 10
+		cursor: pointer
+		hover-opacity()
+
+	&__controls
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background: $color11
+		position: relative
+		overflow: hidden
+		font-size: 14px
+		&__start
+			background-color: $color3
+			hover-opacity()
+			background-image: url(../img/icons/start.png)
+			background-position: 5px center
+			background-repeat: no-repeat
+			display: block
+			text-decoration: none
+			padding: 3px;
+			padding-left: 30px
+			border-radius: 10px;
+			margin-bottom: -3px;
+			.catalog-item__controls__item &
+				&:visited
+				&
+					color: white
+		&__item
+			a
+			a:visited
+				color: $color9
+			& + &
+				margin-top: 15px
+		& .image-icon
+			margin-right: 8px
+			vertical-align: bottom;
+			margin-bottom: -3px;
+		&__left
+			float: left
+			width: 57%
+		&__right
+			float: left
+			width: 43%
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			height: 1px
+			background-image: url("../img/line2.png")
+			background-repeat: repeat-x
+
+	& [data-views]
+		position: relative
+		.catalog_type2 &
+			+below($media-size1)
+				padding-right: 80px
+		&:after
+			position: absolute;
+			top: 1px;
+			right: 0;
+			content: attr(data-views);
+			font-size: 13px;
+			color: white;
+			padding: 1px 10px 2px 25px;
+			background-color: $color3
+			background-image: url(../img/icons/views.png)
+			background-repeat: no-repeat
+			background-position: 4px center
+			.catalog_type3 &
+				+below($media-size1)
+					top: -62px;
+
+
+	&__image
+		display: block
+		-webkit-backface-visibility: hidden
+		position: relative
+		hover-opacity()
+		&:after
+			.catalog_type1 &
+				+below($media-size1)
+					position: absolute
+					bottom: 0
+					left: 179.5%
+					width: 1px
+					top: 71px
+					content: ""
+					background-image: url("../img/line3.png")
+					background-repeat: repeat-y
+				+below($media-size4)
+					display: none
+		img
+			display: block
+			max-width: 100%
+		.catalog_type1 &
+		.catalog_type2 &
+			+below($media-size1)
+				width: 40%
+		.catalog_type1 &
+			+below($media-size1)
+				min-height: 150px
+		.catalog_type1 &
+			+below($media-size4)
+				width: 50%
+		.catalog_type1 &
+			+below($media-size5)
+				width: 130px
+				min-height: 110px
+	&__name
+		font-size: 20px
+		font-weight: 700
+		margin: 10px 0
+		color: $color7
+		height: 24px
+		.catalog_type1 &
+		.catalog_type2 &
+			+below($media-size1)
+				position: absolute
+				bottom 100%
+				left: 0
+				right: 0
+		.catalog_type1 &
+			+below($media-size4)
+				width: 50%
+				right: auto
+		.catalog_type1 &
+			+below($media-size5)
+				width: 130px
+	&__tel
+		font-size 18px
+		color: $color10
+		margin: 10px 0
+		height: 22px
+		.catalog_type1 &
+		.catalog_type2 &
+			+below($media-size1)
+				position: absolute
+				top: 0
+				width: 60%
+				right: 0
+				margin-top: 0
+				padding-left: 15px
+		.catalog_type1 &
+			+below($media-size4)
+				top: auto
+				bottom: 100%
+				width: 50%
+		.catalog_type1 &
+			+below($media-size5)
+				width: auto
+				left: 130px
+				font-size: 17px
+
+		b
+			color: $color9
+	&__metro
+		text-decoration: underline
+		font-size: 14px;
+		margin-top: 10px
+		padding-bottom: 20px
+		color: $color9
+		height: 40px
+		.catalog_type1 &
+		.catalog_type2 &
+			+below($media-size1)
+				position: absolute
+				top: 31px
+				width: 60%
+				right: 0
+				margin-top: 0
+				padding-left: 15px
+		.catalog_type1 &
+			+below($media-size4)
+				top: 0
+				padding-bottom: 10px
+				width: 50%
+		.catalog_type1 &
+			+below($media-size5)
+				width: auto
+				left: 130px
+		.image-icon
+			margin-right: 10px
+			margin-bottom: -4px;
+
+	&__text
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-size: 14px
+		position: relative
+		color: $color10
+		height: 65px
+		.catalog_type1 &
+			+below($media-size1)
+				background-color: $color6
+				padding-left: 15px
+				padding-right: 15px
+				margin-top: 10px
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			height: 1px
+			background-image: url("../img/line2.png")
+			background-repeat: repeat-x
+			.catalog_type1 &
+				+below($media-size1)
+					top: -11px
+					z-index: -1
+	&__hidden
+		padding-bottom: 5px
+		background: $color11
+		position: absolute
+		left: 0
+		right: 0
+		top: 100%
+		opacity 0
+		visibility hidden
+		//transition all 0.2s ease-in-out 0s
+		&:before
+			content: ""
+			position: absolute
+			top: 3px
+			z-index: -1
+			bottom: 0
+			left: 0
+			right: 0
+			shadow1()
+			.catalog_type1 &
+				+below($media-size1)
+					display: none
+		+below($media-size1)
+			opacity 1
+			visibility visible
+			position: static
+			background-color: transparent
+	&:hover
+		z-index: 20
+	&:hover &__hidden
+		opacity 1
+		visibility visible
+	&__parameters
+		overflow: hidden
+		position: relative
+		padding: 20px 0
+		color #9b9b9b
+		&:after
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			height: 1px
+			background-image: url("../img/line2.png")
+			background-repeat: repeat-x
+		&:before
+			top: 0
+		&:after
+			bottom: 0
+			.catalog_type1 &
+				+below($media-size1)
+					display: none
+		.catalog_type1 &
+			+below($media-size1)
+				position: absolute
+				top: 71px
+				right: 0
+				width: 60%
+				padding-left: 15px
+				padding-top: 10px
+				padding-bottom: 10px
+		.catalog_type1 &
+			+below($media-size4)
+				top: 30px
+				width: 50%
+		.catalog_type1 &
+			+below($media-size5)
+				width: auto
+				left: 130px
+		&__block
+			width: 50%
+			float: left
+			&:first-child:after
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				width: 1px
+				right: 50%
+				background-image: url(../img/line3.png)
+				background-repeat: repeat-y
+				.catalog_type1 &
+					+below($media-size1)
+						display: none
+				.catalog_type1 &
+					+below($media-size4)
+						display: block
+						height: 1px
+						width: auto
+						bottom: auto
+						top: 50%
+						margin-top: 10px
+						left: 0
+						right: 0
+						background-image: url(../img/line2.png)
+						background-repeat: repeat-x
+			.catalog_type1 &:first-child
+				+below($media-size1)
+					padding-right: 7px
+			.catalog_type1 &:last-child
+				+below($media-size1)
+					padding-left: 7px
+			.catalog_type1 &
+				+below($media-size4)
+					width: auto
+					float: none
+					padding: 0
+			.catalog_type1 &:first-child
+				+below($media-size4)
+					padding-right: 0
+					padding-bottom: 3px
+			.catalog_type1 &:last-child
+				+below($media-size4)
+					padding-left: 0
+					padding-top: 3px
+		&__table
+			white-space: nowrap
+			font-size: 13px
+			td
+				padding: 2px 0
+			td:last-child
+				text-align: right
+				font-size: 14px
+				color: $color9
+			b
+				color: $color3
+	&__reviews
+		margin-top: 15px
+		margin-bottom: 10px
+		.image-icon
+			margin-right: 17px
+			margin-bottom: -2px
+		em
+			color #9b9b9b
+	&__video
+		margin: 10px 0
+		.image-icon
+			margin-right: 19px
+			margin-bottom: -2px
+		&__link
+			blue-link()
+			float: right
+			margin-top: 2px
+	&__vip
+		padding-top: 10px
+		padding-bottom: 10px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			height: 1px
+			background-image: url("../img/line2.png")
+			background-repeat: repeat-x
+		&__label
+			color: $color3
+			&__top
+				font-weight: 700
+				font-size: 18px
+			&__bottom
+				font-size: 13px
+			.image-icon
+				margin-right: 5px
+		&__button
+			background-color: #fdb261
+			font-size: 13px
+			float: right
+			margin-top: 9px
+			padding: 2px 6px
+			hover-opacity()
+			&
+			&:visited
+			&:hover
+				color: white
+				text-decoration: none
+		.button
+			font-weight: 700
+	& &__views[data-views]
+		text-align: right
+		margin: 12px 0
+		&:after
+			position: static
+			display: inline-block
+	&__top
+		background-color: $color11
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			height: 1px
+			background-image: url("../img/line2.png")
+			background-repeat: repeat-x
+			bottom: 0
+		&__right
+			margin-left: 121px
+			padding-top: 1px
+		.catalog-item__image
+			width: 111px
+			float: left
+			position: relative
+			z-index: 1
+		.catalog-item__controls__start
+			padding-left: 24px
+			max-width: 90px
+			margin-right: 5px
+			margin-top: -2px
+			margin-bottom: -1px
+		hr.line3
+			margin-right: 10px
+		.catalog-item__controls__item
+			margin: 10px 0
+			.image-icon.change
+			.image-icon.delete
+			.image-icon.disabled
+			.image-icon.enabled
+			.image-icon.stop
+				width: 18px
+				height: 18px
+				background-size: cover
+				vertical-align: bottom
+				margin-right: 6px
+				margin-bottom: -1px;
+			.image-icon.map-pin
+				vertical-align: bottom
+				margin-right: 8px
+				margin-left: 2px
+				margin-bottom: -1px
+			.image-icon.clock-black
+				vertical-align: bottom
+				margin-left: -1px
+				margin-right: 6px
+				margin-bottom: -1px
+
+	&_my-girls
+		border-bottom: 5px solid transparent
+	&_vip-active
+		border: 2px solid $color3
+
+	&__description
+		font-size: 14px
+		color: $color9
+		margin: 10px 0
+
+	&__link-block
+		font-size: 14px
+		color: #9b9b9b
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		margin-top: 10px
+		padding-bottom: 20px
+		a
+			&
+			&:hover
+			&:visited
+				color: $color9
+
+	&_banner
+		.catalog-item
+			&__top
+				&__right
+					margin-left: 137px
+				.catalog-item__image
+					width: 127px
+				.catalog-item__controls__item
+					margin: 12px 0
+				hr.line3
+					margin: 0
+					margin-left: -10px
+
+	&_banner-horizontal
+		.catalog-item
+			&__top
+				&__right
+					margin-left: 0
+					padding-top: 2px
+				.catalog-item__image
+					float: none
+					width: auto
+				hr.line3
+					margin: 0
+				.catalog-item__controls__item
+					display: inline-block
+					width: 32%
+					padding-left: 10px
+					margin: 20px 0;
+					+below($media-size5)
+						margin: 10px 0
+						width: 49%
+					&:nth-child(3)
+						+below($media-size5)
+							margin-top: 0
+
+	&_disabled
+		background: $color11
+		.catalog-item__image
+		.catalog-item__vip
+			opacity .3
+		&:not(.catalog-item_banner)
+			.catalog-item__bottom
+				opacity .3

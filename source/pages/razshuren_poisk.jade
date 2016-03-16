@@ -1,0 +1,13 @@
+extends ../modules/layout/layout
+include ../modules/advanced-search/advanced-search
+
+block content
+	+sidebar-right()
+
+	main.main.main_one-sidebar
+		+bread-crumbs(["Главная", "Расширенный поиск анкет"])
+		+page-title({"title": "Расширенный поиск анкет"})
+		
+		+advanced-search()
+		
+	.clear

@@ -1,0 +1,69 @@
+.main-form
+	&__item
+		margin: 19px 0
+		position: relative
+		&__left
+			position: absolute
+			line-height: 14px
+			top: 14px
+			transform translateY(-50%)
+			width: 143px
+			+below($media-size5)
+				width: auto
+				position: static
+				transform none
+				margin-bottom: 5px
+		&__right
+			margin-left: 143px
+			+below($media-size5)
+				margin-left: 0
+		&__info
+			margin-top: 6px
+			a
+				color: $color8
+				display: inline-block
+				&:before
+					content: 'i'
+					display: inline-block
+					border-radius: 50%;
+					background-color: $color8
+					width: 15px;
+					height: 15px;
+					line-height: 15px
+					color: white
+					text-align: center
+					vertical-align: baseline
+					margin-right: 10px
+		&__input-small
+			width: 110px
+			display: inline-block
+			vertical-align: middle
+			+below($media-size4)
+				width: 30%
+			& + &
+				margin-left: 10px
+				+below($media-size4)
+					margin-left: 0
+		&__input-medium
+			width: 234px
+		&__checkbox-small
+			vertical-align: middle
+			margin-left: 36px
+			display: inline-block
+			+below($media-size4)
+				margin-top: 5px
+				margin-left: 0
+		&__price
+			font-size: 16px
+			margin-top: 30px
+			padding-top: 5px
+			b
+				font-size: 18px
+
+		&__float-right
+			float: right
+			+below($media-size4)
+				float: none
+			
+		&__required
+			color: $color17

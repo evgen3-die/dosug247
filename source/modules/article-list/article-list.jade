@@ -1,0 +1,16 @@
+mixin article-list(data)
+	- var info = [{"src": "img/articles/article-image2.jpg", "title": "Московские индивидуалки"}, {"src": "img/articles/article-image3.jpg", "title": "Лучшие девушки Москвы"}, {"src": "img/articles/article-image4.jpg", "title": "Все шлюхи в одном месте"}, {"src": "img/articles/article-image5.jpg", "title": "Самые дешевые путаны столицы"}, {"src": "img/articles/article-image6.jpg", "title": "Классика жанра - вагинальный секс"}, {"src": "img/articles/article-image2.jpg", "title": "Великолепие анала от куртизанок Москвы"}]
+	.two-col
+		- for (var i = 0; i < data.items; i++)
+			.two-col__item
+				.article-item
+					a(href="#").article-item__link
+						img(src=info[i].src, alt=info[i].title).article-item__image
+						.article-item__link__text= info[i].title
+					.article-item__text Спрос на качественны услуги проституток постоянно растет.
+					.forum-reduce-list__item__bottom__item
+						i.image-icon.clock
+						| 21.03.15
+						
+					.clear
+				

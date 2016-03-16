@@ -47,6 +47,7 @@ button-size(padding, font-size, line-height)
 
 //- Base style
 .button
+	hover-opacity()
 	display inline-block
 	margin-bottom 0
 	font-weight normal
@@ -55,8 +56,6 @@ button-size(padding, font-size, line-height)
 	touch-action manipulation
 	cursor pointer
 	background-image none
-	vertical-align middle
-	border 1px solid transparent
 	white-space nowrap
 	line-height normal
 	-webkit-user-drag none
@@ -66,9 +65,20 @@ button-size(padding, font-size, line-height)
 	user-select none
 	box-sizing border-box
 	text-decoration none
-	background-color transparent
 	padding 0
 	transition 125ms all ease-in-out
+	border none
+	border-radius 2px
+	background-color: $color3
+	border-color: $color1
+	color: white
+
+	a&
+		color: white
+
+	.image-icon
+		margin-bottom: -1px
+		margin-right: 12px
 
 	&__icon
 	&__text
@@ -85,8 +95,8 @@ button-size(padding, font-size, line-height)
 
 	&:hover
 	&:focus
-		color #333333
 		text-decoration none
+		color: white
 
 	&:active
 		outline 0
@@ -122,15 +132,13 @@ button-size(padding, font-size, line-height)
 //- Button sizes
 .button
 .button_size_default
-	button-size(
-		padding: 6px 12px,
-		font-size: 16px,
-		line-height: 1.4
-	)
+	padding: 3px 12px
+	font-size: 14px
+	line-height: 23px
 
 .button_size_lg
 	button-size(
-		padding: 16px 20px,
+		padding: 5px 25px,
 		font-size: 18px,
 		line-height: 1.3333333
 	)

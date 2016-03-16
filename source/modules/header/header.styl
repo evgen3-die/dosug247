@@ -1,8 +1,15 @@
 .header
-	background #2d3e60
-	padding 115px 0 35px
-	+below($content-width)
-		padding-top 70px
+	padding 0
+	position: relative
+	z-index: 110
+
+
+
+	&__banner
+		+below($media-size2)
+			display: none
+		& img
+			max-width: 100%
 
 	&__inner
 		max-width $content-width
@@ -10,51 +17,148 @@
 
 	&__top
 		transition padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s
-		padding 1em 0
-		position fixed
+		padding 10px 0
 		top 0
 		width 100%
 		z-index 1000
-		background-color #2d3e60
 		box-sizing border-box
 
 
-		+below($content-width)
+		+below($media-size1)
 			m-padding()
+		+below($media-size4)
+			padding-top: 2px
+			padding-bottom: 2px
 
-		+below(750px)
-			padding-right 0
-			padding-top 0
-			padding-bottom 0
 
+	&__logo
+		+below($media-size2)
+			margin-top: 7px
+		+below($media-size4)
+			margin-top: 0
+		img
+			+below($media-size4)
+				width: 110px
 	&__logo
 	&__menu
 		float left
 
-	&__logo
-		width 190px
-		margin-right 40px
-		+below(980px)
-			float none
-			width auto
-			margin 0
-			text-align center
-			padding-bottom 30px
-		+below(750px)
-			float left
-			width 190px
-			padding-bottom 0
-			padding-top 5px
+	&__dropdown-wrap
+		float: left
+		+below($media-size4)
+			float: right
+	&__dropdown
+		margin-top: 14px
+		margin-left 26px
+		float left
+		+below($media-size2)
+			float: none
+			margin-top: 0
+		+below($media-size3)
+			margin-left: 12px
+		+below($media-size4)
+			margin-left: 0
+		&_city
+			+below($media-size4)
+				margin-top: 7px
+		&_metro
+			+below($media-size4)
+				position: absolute
+				top: 49px
+				left: 55px
+				right: 55px
+				margin-left: 0
+	&__login
+		padding-left 30px
+		background-image: url(../img/locked.png)
+		background-repeat: no-repeat
+		background-position: 3px 4px;
+		float: right
+		margin-top: 14px
+		+below($media-size3)
+			background-image: none
+			margin-top: 18px
+			padding-left: 0
+		&__top
+			+below($media-size3)
+				display: none
+			&__input
+				width: 117px
+				float: left
+				.form-item_style_default .form-item__input input
+					background-color: $color2
+					border: none
+			&__input + &__input
+				margin-left: 10px
+			&__button
+				float: left
+				width: 80px
+				margin-left: 10px
+		&__bottom
+			+below($media-size3)
+				font-size: 18px
+			&__enter-link
+			&__register-link
+				+below($media-size3)
+					&:before
+						content ''
+						width: 17px
+						height: 17px
+						background-repeat: no-repeat
+						background-position: center
+						display: inline-block
+						margin-right: 10px
+						margin-bottom: -2px
+			&__enter-link
+				+below($media-size3)
+					&:before
+						background-image: url(../img/locked.png)
+				+below($media-size4)
+					font-size: 0
+					&:before
+						background-image: url(../img/icons/enter.png)
+						width: 45px
+						height: 40px
+						top: 49px
+						right: 10px
+						margin-right: 0
+						border-left 1px solid white
+						position: absolute
+			&__register-link
+				+below($media-size3)
+					&:before
+						background-image: url(../img/icons/pen-login.png)
+				+below($media-size4)
+					display: none
+			&__divider
+				background-color: #333333
+				width: 1px
+				height: 14px
+				vertical-align: middle
+				display: inline-block
+				margin: 0 2px
+				+below($media-size3)
+					margin-left: 10px
+					margin-right: 10px
+					height: 17px
+				+below($media-size4)
+					display: none
+			&__password
+				display: inline-block
+				+below($media-size3)
+					display: none
+			&__enter
+				display: none
+				+below($media-size3)
+					display: inline-block
 
 	&__menu
 		width 600px
 		padding-top 5px
 
+
 	&__mobile-menu-trigger
 		display none
-		+below(750px)
-			display block
-			float right
 
 	&__github
 		float right
@@ -62,14 +166,13 @@
 		padding-top 5px
 
 	&__bottom
-		padding 70px 0
-		+below($content-width)
+		+below($media-size1)
 			m-padding()
+		.header__inner
+			+below($media-size4)
+				background-color: $color3
+				border-radius 2px
 
-	&__menu
-	&__github
-		+below(750px)
-			display none
 
 	&_fixed &__top
 		box-shadow 0px 2px 3px rgba(#000, 0.04)

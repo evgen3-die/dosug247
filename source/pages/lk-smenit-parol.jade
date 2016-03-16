@@ -1,0 +1,31 @@
+extends ../modules/layout/layout
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Сменить пароль"])
+		+page-title({"title": "Сменить пароль"})
+
+		form.main-form
+			.main-form__item
+				.main-form__item__left Старый пароль:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left Новый пароль:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left Повторить пароль:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__right
+					.main-form__item__float-right
+						button.button.button_size_lg Сохранить
+
+
+
+	.clear

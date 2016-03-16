@@ -1,0 +1,35 @@
+mixin register()
+	form.main-form.main-form_register
+		.main-form__item
+			.main-form__item__left Ваш логин:
+			.main-form__item__right
+				+form-item(type="text", errors=["Пожалуйста, заполните поле"])
+		.main-form__item
+			.main-form__item__left Пароль:
+			.main-form__item__right
+				+form-item(type="password", mod="valid", value="2134235445")
+		.main-form__item
+			.main-form__item__left Повторите пароль:
+			.main-form__item__right
+				+form-item(type="password", mod="valid", value="2134235445")
+		.main-form__item
+			.main-form__item__left Ник:
+			.main-form__item__right
+				+form-item(type="password", placeholder="Имя отображаемое на сайте")
+		.main-form__item
+			.main-form__item__left e-mail:
+			.main-form__item__right
+				+form-item(type="text", mod="valid", value="xburan2@mail.ru")
+		.main-form__item
+			.main-form__item__left Ваш город:
+			.main-form__item__right
+				-var data = ["Санкт-Петербург", "Москва", "Ижевск"]
+				+form-item(type="select", placeholder=" ", errors=["Пожалуйста, заполните поле"], name="select", value=data)
+		.main-form__item
+			.main-form__item__right
+				+form-item(type="captcha", image="img/captcha.png", errors=["Пожалуйста, заполните поле"])
+		.main-form__item
+			.main-form__item__right
+				button.button.button_size_lg.main-form_register__button
+					i.image-icon.register 
+					| Зарегистрироваться

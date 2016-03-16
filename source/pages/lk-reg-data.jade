@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/register-data/register-data
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Регистрационные данные"])
+		+page-title({"title": "Регистрационные данные"})
+
+		+register-data()
+
+
+
+	.clear

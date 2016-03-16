@@ -1,0 +1,51 @@
+mixin messages-list()
+	.messages-list
+		a(href="#").messages-list__item.messages-list__item_new
+			.messages-list__item__image
+				img(src="img/message/message-image1.jpg", alt="Елизавета")
+			.messages-list__item__content
+				.messages-list__item__date 15.04.15
+				.messages-list__item__name Елизавета
+				.messages-list__item__text Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая
+			.clear
+		a(href="#").messages-list__item
+			.messages-list__item__image
+				img(src="img/message/message-image2.jpg", alt="Дианка")
+			.messages-list__item__content
+				.messages-list__item__date 15.04.15
+				.messages-list__item__name Дианка
+				.messages-list__item__text.messages-list__item__text_not-view Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая
+			.clear
+		a(href="#").messages-list__item
+			.messages-list__item__image
+				img(src="img/message/default-image.jpg", alt="Китти")
+			.messages-list__item__content
+				.messages-list__item__date 15.04.15
+				.messages-list__item__name Китти
+				.messages-list__item__text Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая
+			.clear
+		a(href="#").messages-list__item
+			.messages-list__item__image
+				img(src="img/message/message-image1.jpg", alt="Китти")
+			.messages-list__item__content
+				.messages-list__item__date 15.04.15
+				.messages-list__item__name Китти
+				.messages-list__item__text Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая
+			.clear
+		a(href="#").messages-list__item
+			.messages-list__item__image
+				img(src="img/message/message-image2.jpg", alt="Китти")
+			.messages-list__item__content
+				.messages-list__item__date 15.04.15
+				.messages-list__item__name Китти
+				.messages-list__item__text.messages-list__item__text_not-view Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая
+			.clear
+		- for (var i = 0; i < 5; i++)	
+			a(href="#").messages-list__item
+				.messages-list__item__image
+					img(src="img/message/message-image1.jpg", alt="Китти")
+				.messages-list__item__content
+					.messages-list__item__date 15.04.15
+					.messages-list__item__name Китти
+					.messages-list__item__text Взрослая, стильная, красивая и умелая женщина, знающая и умеющая многое, сделает жизнь более приятной и положительной Взрослая, стильная, красивая и умелая женщина, знающая
+				.clear

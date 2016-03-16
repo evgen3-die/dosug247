@@ -1,0 +1,272 @@
+extends ../modules/layout/layout
+
+
+block content
+	+sidebar-right()
+
+	main.main.main_one-sidebar
+		+bread-crumbs(["Главная", "Индивидуалки", "Леночка"])
+		
+		.product-page
+			.product-page__left
+				+product-slider({
+					"list": [
+						{"src": "img/product-page/slider-img-1.jpg", title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'},
+						{
+							"src": "img/product-page/slider-img-2.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						},
+						{
+							"src": "img/product-page/slider-img-3.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						},
+						{
+							"src": "img/product-page/slider-img-4.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						},
+						{
+							"src": "img/product-page/slider-img-5.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						},
+						{
+							"src": "img/product-page/slider-img-6.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						},
+						{
+							"src": "img/product-page/slider-img-7.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						}, {
+							"src": "img/product-page/slider-img-8.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						}, {
+							"src": "img/product-page/slider-img-9.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						}, {
+							"src": "img/product-page/slider-img-10.jpg",
+							title: 'Леночка, +7 916 15 65 153<br><i class="image-icon metro"></i>Арбатская'
+						}
+					]
+				})
+				.product-page__video-wrap
+					.sidebar-left__header.border Видео
+					video(controls).product-page__left__video
+						source(src="http://www.w3schools.com/html/mov_bbb.mp4", type="video/mp4")
+						source(src="http://www.w3schools.com/html/mov_bbb.ogg", type="video/ogg")
+				.product-page__map-wrap
+					.sidebar-left__header.border Расположение
+					<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=CeXSIo8-GVo03b-C-OZ5CLMEsbQQFFRo&width=100%&height=270&lang=ru_RU&sourceType=constructor"></script>
+			.product-page__right
+				.sidebar-left__header.border Леночка
+					.sidebar-left__header__phone
+						.girl-reduce__phone
+							i.phone.image-icon
+							| +7 916 
+							b 43 56 123
+				.product-page__right__table
+					table.product-table
+						tr
+							td Город:
+							td Санкт-Петербург
+						tr
+							td Знак зодиака:
+							td Телец
+						tr
+							td Возраст:
+							td
+								a(href="#") 22
+						tr
+							td Рост:
+							td
+								a(href="#") 167
+						tr
+							td Вес:
+							td
+								a(href="#") 55
+						tr
+							td Размер груди:
+							td
+								a(href="#") 1
+						tr
+							td Ограничения по возрасту:
+							td 18
+						tr
+							td Цвет волос:
+							td Каштановые
+						tr
+							td Интимная стрижка:	
+							td Полная депиляция	
+						tr
+							td Национальность:
+							td Русская
+						tr
+							td Размер одежды:
+							td
+								a(href="#") 42
+						tr
+							td Метро:
+							td
+								i.image-icon.metro
+								a(href="#") Парк Победы
+								| ,
+								a(href="#") Московская
+								| ,
+								a(href="#") Звёздная
+						tr
+							td Район:
+							td Московский район	
+						tr
+							td Удобное время для звонка:
+							td Круглосуточно
+						tr
+							td Дата создания:
+							td 02.04.14 13:56
+						tr
+							td Дата обновления:	
+							td 28.04.15 17:00
+						tr
+							td Обо мне:	
+							td Нежная и изысканная конфетка желает познакомиться! Хочу постараться воплотить в реальность все
+								| свои и Ваши сексуальные фантазии!!!	
+							
+				.product-page__right__table-price
+					table.product-table-price
+						tr
+							td
+								b Расценки
+							td Аппартементы
+							td Выезд
+							td Анал
+						tr
+							td Цена за 1 час:
+							td
+								b 2000
+							td
+								b 3000
+							td
+								b 5000
+						tr
+							td Цена за 2 часа:
+							td
+								b 6000
+							td
+								b 8000
+							td
+								b 9000
+						tr
+							td Цена за ночь:
+							td
+								b 15000
+							td
+								b 17000
+							td
+								b 20000
+				.sidebar-left__header.border Предпочтения
+				.product-page__right__preferences
+					.product-page__right__preferences__left
+						.product-page__right__preferences__title Основные услуги
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Секс классический
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Секс анальный
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Секс групповой
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Секс лесбийский
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Услуги семейной паре
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Минет в презервативе
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Минет без резинки
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Минет глубокий
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Минет в машине
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Куннилингус
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Игрушки
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Окончание на грудь
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Окончание на лицо
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Окончание в рот
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Cтриптиз профи
+					.product-page__right__preferences__right
+						.product-page__right__preferences__title Стриптиз
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Стриптиз не профи
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Лесби откровенное
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Лесби-шоу легкое
+						
+						.product-page__right__preferences__title Экстрим
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Страпон
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Анилингус делаю
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Золотой дождь выдача
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Золотой дождь прием
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Копро выдача
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Фистинг анальный
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Фистинг классический
+						
+						.product-page__right__preferences__title Разное
+						.product-page__right__preferences__item
+							i.image-icon.preference-yes
+							| Ролевые игры
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Фото/видео съемка
+						.product-page__right__preferences__item
+							i.image-icon.preference-no
+							del Эскорт-услуги
+				
+				.product-page__map-wrap
+					.sidebar-left__header.border Расположение
+					<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=CeXSIo8-GVo03b-C-OZ5CLMEsbQQFFRo&width=100%&height=270&lang=ru_RU&sourceType=constructor"></script>
+
+
+				.sidebar-left__header.border Отзывы о девушке
+					
+				.product-page__right__comments
+					+comments-list()
+				
+				.sidebar-left__header.border Добавить отзыв
+				.product-page__right__sign-in-content
+					+sign-in-content()
+					
+	.clear

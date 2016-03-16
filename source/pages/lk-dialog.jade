@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/dialog/dialog
+
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Сообщения", "Диалог с Елизаветой"])
+		+page-title({"title": "Диалог с Елизаветой"})
+		+pagination({"pages": 7, "active": 1, "total": 15, "center": true})
+		
+		+dialog()
+
+	.clear

@@ -710,6 +710,14 @@ mixin demo()
 			include ../pseudo-dropdown/pseudo-dropdown
 			+pseudo-dropdown({"list": [{"title": "Item 1"}, {"title": "Item 2"}, {"title": "Item 3"}, {"title": "Item 4 - active", "active": true}, {"title": "Item 5"}]})
 			
+			+pseudo-dropdown-type1({
+				"list": [{"title": "Item 1"}, {"title": "Item 2"}, {"title": "Item 3"}, {
+					"title": "Item 4 - active",
+					"active": true
+				}, {"title": "Item 5"}],
+				"title": "Город:"
+			})
+
 			h3#images-helpers Images helpers
 			p
 				img( src="img/content/image.jpg", alt="").align-image-left

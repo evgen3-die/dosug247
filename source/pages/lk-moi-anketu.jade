@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/catalog/catalog-girls-my
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Мои анкеты"])
+		+page-title({"title": "Мои анкеты"})
+
+		+catalog-girls-my()
+
+
+
+	.clear

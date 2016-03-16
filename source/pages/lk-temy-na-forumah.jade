@@ -1,0 +1,14 @@
+extends ../modules/layout/layout
+include ../modules/forum-messages-list/forum-topic-list
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Темы на форумах"])
+		+page-title({"title": "Темы на форумах"})
+
+		+forum-topic-list()
+
+	.clear

@@ -44,14 +44,14 @@
 
 // Sliders
 // ---------------------------------------------------------------------------
-// require plugins/slick/slick.js
+//= require plugins/slick/slick.js
 // require plugins/bjqs/bjqs-1.3.js
 
 
 // Modlal windows and lightbox gallery
 // ---------------------------------------------------------------------------
-// require plugins/colorbox/jquery.colorbox.js
-// require plugins/colorbox/i18n/jquery.colorbox-ru.js
+//= require plugins/colorbox/jquery.colorbox.js
+//= require plugins/colorbox/i18n/jquery.colorbox-ru.js
 
 
 // Share buttons
@@ -139,7 +139,7 @@
 
 // Scrollbar plugin
 // ---------------------------------------------------------------------------
-// require plugins/perfect-scrollbar/perfect-scrollbar.js
+//= require plugins/perfect-scrollbar/perfect-scrollbar.js
 
 // Forms
 // ---------------------------------------------------------------------------
@@ -174,3 +174,6 @@
 // require plugins/jquery.spinner.js
 // require plugins/jquery.tabs.js
 
+// Text overflow plugin
+// ---------------------------------------------------------------------------
+//= require plugins/jquery.dotdotdot.js

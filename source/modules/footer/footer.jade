@@ -3,5 +3,13 @@ include ../copyright/copyright
 mixin footer(data)
 	footer.footer
 		.footer__inner
-			+copyright()
+			.footer__logo
+				+logo()
+			.footer__menu
+				a(href="#").footer__menu__item Индивидуалки
+				a(href="#").footer__menu__item Галерея анкет
+				a(href="#").footer__menu__item Салоны
+				a(href="#").footer__menu__item Секс форум
+				a(href="#").footer__menu__item Поиск анкет
+			.clear
 			

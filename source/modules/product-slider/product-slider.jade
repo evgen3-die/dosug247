@@ -1,0 +1,10 @@
+mixin product-slider(data)
+	.product-slider
+		.product-slider__top
+			each ent, num in data.list
+				a(href=ent.src, data-title=ent.title).product-slider__top__item
+					img(src=ent.src, alt="")
+		.product-slider__bottom
+			each ent, num in data.list
+				.product-slider__bottom__item
+					img(src=ent.src, alt="")

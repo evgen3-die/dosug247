@@ -1,0 +1,82 @@
+mixin add-banner()
+	.add-banner
+		.add-banner__text
+			p С помощью данной страницы, Вы можете добавить свой банер, который будет отображаться на всех страницах нашего сайта, для посетителей выбраного города или для всех городов.
+		h2 Добавить банер
+		form.main-form
+			.main-form__item
+				.main-form__item__left Название:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left Место размещения:
+				.main-form__item__right
+					-var data = ["Подвал сайта, на всех страницах сайта", "Сайдбар", "В контенте"]
+					+form-item(type="select", placeholder=" ", name="select", value=data)
+					.main-form__item__info
+						a(href="#") Посмотреть все места размещения банеров
+			.main-form__item
+				.main-form__item__left Банер:
+				.main-form__item__right
+					+form-item(type="file")
+			.main-form__item
+				.main-form__item__left Ссылка:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left Город:
+				.main-form__item__right
+					-var data = ["Санкт-Петербург", "Москва", "Ижевск"]
+					+form-item(type="select", placeholder=" ", name="select", value=data)
+			.main-form__item
+				.main-form__item__left Дата отключения:
+				.main-form__item__right
+					.main-form__item__input-small
+						-var data = ["1", "2", "3"]
+						+form-item(type="select", name="select", placeholder="День", value=data)
+					.main-form__item__input-small
+						-var data = ["1", "2", "3"]
+						+form-item(type="select", name="select", placeholder="Месяц", value=data)
+					.main-form__item__input-small
+						-var data = ["2015", "2016", "2017"]
+						+form-item(type="select", name="select", placeholder="Год", value=data)
+					.main-form__item__checkbox-small
+						+form-item(type="checkbox", label="Бессрочно")
+			.main-form__item
+				.main-form__item__right
+					.main-form__item__float-right
+						button.button.button_size_lg Загрузить банер
+					.main-form__item__price Бюджет: 
+						b.orange 3500
+						|  рублей
+		hr.line2
+		h2 Тарифы на размещение банеров
+		.main-form__item
+			.main-form__item__left Выберите город
+			.main-form__item__right
+				.main-form__item__input-medium
+					-var data = ["Санкт-Петербург", "Москва", "Ижевск"]
+					+form-item(type="select", placeholder=" ", name="select", value=data)
+		table.table.add-banner__table-price
+			thead
+				tr
+					td Размер баннера
+					td Стоимость в месяц (все страницы)
+			tbody
+				tr
+					td
+						b.orange 110х680
+						| , подвал сайта
+					td
+						b 15 500 
+						| рублей
+				tr
+					td
+						b.orange 190х190
+						| , правый блок в ротации
+					td
+						b 23 500 
+						| рублей
+		.add-banner__text
+			h3 Размеры и расположение
+			p Мы принимаем баннеры для размещения в правом блоке и внизу страницы (под каталогом). Исходя из этого баннеры должны быть следующих размеров (Ш х В) в пикселях: правый блок - 200х100, 200х200 и внизу страницы 468х60. Принимаются баннеры в формате GIF и JPG размером до 50 кБ. Баннеры в других форматах

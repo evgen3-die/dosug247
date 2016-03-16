@@ -1,0 +1,15 @@
+extends ../modules/layout/layout
+include ../modules/add-questionnaire/add-girl-questionnaire
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Добавить анкету"])
+		+page-title({"title": "Добавить анкету"})
+
+		+add-girl-questionnaire()
+
+
+	.clear

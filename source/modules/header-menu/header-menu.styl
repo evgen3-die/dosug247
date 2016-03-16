@@ -1,0 +1,98 @@
+.header-menu
+	text-align: center
+	background-color: $color3
+	border-radius 2px
+	+below($media-size4)
+		display: none
+	+above($media-size4)
+		display: block !important
+
+	ul
+		padding: 0
+		margin: 0
+		letter-spacing: normal
+		font-size: 0
+		+below($media-size3)
+			display: table
+			width: 100%
+		+below($media-size4)
+			display: block
+
+		li
+			display: inline-block
+			font-size: 15px
+			text-transform: uppercase
+			position: relative
+			+below($media-size3)
+				display: table-cell
+				text-align: center
+			+below($media-size4)
+				display: block
+				border-top 1px solid white
+			
+			a
+				text-decoration: none
+				color: white
+				padding: 8px 40px
+				display: block
+				hover-opacity()
+				+below($media-size2)
+					padding-left 20px
+					padding-right: 20px
+				+below($media-size3)
+					font-weight: 700
+					padding-left: 5px
+					padding-right: 5px
+				+below($media-size4)
+					font-weight: 400
+				&:before
+					content: ''
+					display: inline-block
+					width: 24px
+					height: 23px
+					background-position: center
+					background-repeat: no-repeat
+					margin-right: 20px
+					vertical-align: bottom
+					+below($media-size2)
+						margin-right: 10px
+					+below($media-size3)
+						display: none
+					+below($media-size4)
+						display: inline-block
+
+		li + li:before
+			content: '';
+			position: absolute
+			height: 14px
+			width: 1px
+			background-image: url(../img/header-menu/divider.png)
+			left: 0
+			top: 13px
+			background-repeat: no-repeat
+			+below($media-size4)
+				display: none
+		.plump a:before
+			background-image: url(../img/header-menu/plump.png)
+		.polaroid a:before
+			background-image: url(../img/header-menu/polaroid.png)
+		.male a:before
+			background-image: url(../img/header-menu/male.png)
+		.speech a:before
+			background-image: url(../img/header-menu/speech.png)
+
+		.zoom a:before
+			background-image: url(../img/header-menu/zoom.png)
+
+
+.header-menu-button
+	display: none
+	+below($media-size4)
+		display: block
+		height: 40px
+		width: 45px
+		background-repeat: no-repeat
+		background-image: url(../img/icons/menu.png)
+		background-position: center
+		cursor: pointer
+		border-right 1px solid white

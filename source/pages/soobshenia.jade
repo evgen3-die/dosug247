@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/messages-list/messages-list
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Сообщения"])
+		+page-title({"title": "Сообщения"})
+
+		+messages-list()
+
+		+pagination({"pages": 7, "active": 1, "total": 15, "center": true})
+
+	.clear

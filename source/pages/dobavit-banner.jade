@@ -1,0 +1,14 @@
+extends ../modules/layout/layout
+
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Добавить баннер"])
+		+page-title({"title": "Добавить баннер"})
+
+		+add-banner()
+
+	.clear

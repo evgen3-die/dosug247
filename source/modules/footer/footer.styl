@@ -1,13 +1,29 @@
 .footer
-	background #ebebeb
-	border-top 1px solid #dadada
+	background $color6
+	border-top 2px solid $color3
 
 	&__inner
-		padding 30px 0
-		max-width 1160px
+		padding 24px 0
+		max-width: 1175px
 		margin 0 auto
-		+below($content-width)
+		+below($media-size1)
 			m-padding()
 
-	&__copyright
-		//
+	&__logo
+		float: left
+		img
+			width: 135px
+			display: block
+
+	&__menu
+		float: right
+		margin-top: 7px
+		+below($media-size4)
+			margin-top: 0
+			width: 120px
+		&__item
+			margin-left: 20px
+			display: inline-block
+			+below($media-size4)
+				display: block
+				margin-left: 0

@@ -1,0 +1,17 @@
+extends ../modules/layout/layout
+
+
+block content
+	+sidebar-left()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Галерея"])
+		+page-title({"title": "Галерея"})
+		+pagination({"pages": 7, "active": 1, "total": 15, "hideMobile": true})
+
+		+catalog-girls-reduce()
+
+		+pagination({"pages": 7, "active": 1, "total": 15})
+
+	.clear

@@ -5,7 +5,6 @@ mixin bread-crumbs(data)
 				if (num+1 < data.length)
 					li.bread-crumbs__item 
 						a(href="#").bread-crumbs__link= ent
-						.bread-crumbs__separator
-							+svg-icon('chevron-right')
+						.bread-crumbs__separator -
 				else
 					li.bread-crumbs__item= ent

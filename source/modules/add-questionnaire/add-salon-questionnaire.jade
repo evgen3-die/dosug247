@@ -1,0 +1,137 @@
+mixin add-salon-questionnaire()
+	.add-questionnaire
+		.add-questionnaire__left
+			.sidebar-left__title Заполните форму
+			.main-form__item
+				.main-form__item__left Ваш логин#[span.main-form__item__required *]:
+				.main-form__item__right
+					+form-item(type="text", placeholder="Название салона")
+			.main-form__item
+				.main-form__item__left Телефон#[span.main-form__item__required *]:
+				.main-form__item__right
+					+form-item(type="text", placeholder="В формате +7 (xxx) xxx-xx-xx")
+			.main-form__item
+				.main-form__item__left Услуги:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left Сервис:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left Район:
+				.main-form__item__right
+					-var data = ["Санкт-Петербург", "Москва", "Ижевск"]
+					+form-item(type="select", placeholder=" ", value=data)
+			.main-form__item
+				.main-form__item__left Адрес:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left E-mail:
+				.main-form__item__right
+					+form-item(type="text")
+			.main-form__item
+				.main-form__item__left Сайт:
+				.main-form__item__right
+					+form-item(type="text")
+			.sidebar-left__title Загрузите фотографии	
+			.add-questionnaire__block
+				.add-questionnaire__block__title Аватар:
+				.main-form__item
+					+form-item(type="file")
+				.main-form__item
+					em Аватар-титульная фотография. Рекомендуется добавлять логотип салона или презентабельное фото
+				.add-questionnaire__block__title Фото салона:
+				.main-form__item
+					+form-item(type="file")
+				.main-form__item
+					em Возможна загрузка сразу несколько фото, удерживайте клавишу CTRL. Максимальный размер 1 фотографии - 2 МБ!	
+		.add-questionnaire__right
+			.add-questionnaire__dropdown
+				+pseudo-dropdown-type2({
+					"list": [
+						{"title": "Автово"},
+						{"title": "Адмиралтейская"},
+						{"title": "Академическая"},
+						{"title": "Балтийская"},
+						{"title": "Бухарестская"},
+						{"title": "Василеостровская"},
+						{"title": "Владимирская"},
+						{"title": "Волковская"},
+						{"title": "Выборгская"},
+						{"title": "Горьковская"},
+						{"title": "Гостиный двор"},
+						{"title": "Гражданский проспект"},
+						{"title": "Девяткино"},
+						{"title": "Достоевская"},
+						{"title": "Елизаровская"},
+						{"title": "Звёздная"},
+						{"title": "Звенигородская"},
+						{"title": "Кировский завод"},
+						{"title": "Комендантский проспект"},
+						{"title": "Крестовский остров"},
+						{"title": "Купчино"},
+						{"title": "Ладожская"},
+						{"title": "Ленинский проспект"},
+						{"title": "Лесная"},
+						{"title": "Лиговский проспект"},
+						{"title": "Ломоносовская"},
+						{"title": "Маяковская"},
+						{"title": "Международная"},
+						{"title": "Московская"},
+						{"title": "Московские ворота"},
+						{"title": "Нарвская"},
+						{"title": "Невский проспект"},
+						{"title": "Новочеркасская"},
+						{"title": "Обводный канал"},
+						{"title": "Обухово"},
+						{"title": "Озерки"},
+						{"title": "Парк Победы"},
+						{"title": "Парнас"},
+						{"title": "Петроградская"},
+						{"title": "Пионерская"},
+						{"title": "Площадь Александра Невского 1"},
+						{"title": "Площадь Александра Невского 2"},
+						{"title": "Площадь Восстания"},
+						{"title": "Площадь Ленина"},
+						{"title": "Площадь Мужества"},
+						{"title": "Политехническая"},
+						{"title": "Приморская"},
+						{"title": "Пролетарская"},
+						{"title": "Проспект Большевиков"},
+						{"title": "Проспект Ветеранов"},
+						{"title": "Проспект Просвещения"},
+						{"title": "Пушкинская"},
+						{"title": "Рыбацкое"},
+						{"title": "Садовая"},
+						{"title": "Сенная площадь"},
+						{"title": "Спасская"},
+						{"title": "Спортивная"},
+						{"title": "Старая Деревня"},
+						{"title": "Технологический институт 1"},
+						{"title": "Технологический институт 2"},
+						{"title": "Удельная"},
+						{"title": "Улица Дыбенко"},
+						{"title": "Фрунзенская"},
+						{"title": "Чёрная речка"},
+						{"title": "Чернышевская"},
+						{"title": "Чкаловская"},
+						{"title": "Электросила"}],
+					"title": "Выберите станцию метро",
+					"hint": "Не более 3х станций метро",
+					"openned": true
+				})
+		.clear
+		.sidebar-left__title Описание:
+		.add-questionnaire__two-blocks
+			.add-questionnaire__two-blocks__left
+				.add-questionnaire__block__title Общее описание:
+				+form-item(type="textarea")
+			.add-questionnaire__two-blocks__right
+				.add-questionnaire__block__title Описание услуг и цен:
+				+form-item(type="textarea")
+			.clear
+		hr.line2
+		.button.button_size_lg Сохранить анкету
+		

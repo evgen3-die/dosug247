@@ -1,3 +1,4 @@
+/*
 var $header    = $('.header')
 	$headerTop = $header.find('.header__top'),
 	$window    = $(window),
@@ -44,3 +45,6 @@ $('.logo').click(function(event) {
 		'scrollTop': 0
 	}, 900, 'swing');
 });
+*/
+
+

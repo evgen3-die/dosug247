@@ -1,0 +1,93 @@
+.sidebar-right
+	float: right
+	margin-top: 95px
+	width: 193px
+	&__item
+		margin 21px 0
+		&:first-child
+			margin-top: 0
+	+below($media-size1)
+		display: none
+
+
+.girl-reduce
+	shadow1()
+	text-decoration: none
+	color: #666666
+	font-size: 16px
+	background: $color6
+	display: block
+	transition: all .2s ease-in-out 0s
+	&:visited
+		color: #666666
+	&:hover
+		box-shadow 0 0 7px rgba(247,144,29, 0.5)
+		opacity: .8
+	&__image
+		display: block
+		max-width: 100%
+	&__text
+		padding: 10px
+	&__name
+		height: 27px
+		b
+			font-size: 18px
+			color: $color7
+	&__phone
+		height: 24px
+		b
+			font-weight: normal
+			color: $color7
+		.phone
+			margin-right: 8px
+			margin-left: 2px
+			margin-bottom: -2px
+
+.forum-reduce
+	background: $color6
+	border-right: 2px
+	line-height: 1.2
+	&__header
+		color: $color7
+		font-size: 16px
+		font-weight: 700
+		border-bottom 1px solid #dadada
+
+	&__list
+		//
+	&__header
+	&__footer
+		padding: 9px 14px;
+	&__footer
+		text-align: right
+		a
+			color: $color8
+
+.forum-reduce-list
+	&__item
+		padding: 14px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background-image: url(../img/line2.png)
+			background-repeat: repeat-x;
+		&__bottom
+			margin-top: 10px
+			font-size: 12px
+			&__item
+				display: inline-block
+
+				.image-icon
+					margin-right: 3px
+					margin-bottom: -2px
+			&__item + &__item
+				margin-left: 11px
+		&__link
+		&__link:visited
+		&__bottom
+			color: #333333

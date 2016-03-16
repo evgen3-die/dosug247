@@ -1,0 +1,40 @@
+.my-reviews-list
+	&__item
+		padding: 15px
+		padding-left: 75px
+		padding-right: 25px
+		position: relative
+		background: $color6
+		display: block
+		text-decoration: none
+		hover-opacity()
+		shadow1()
+		& + &
+			margin-top: 10px
+		&:before
+			position: absolute;
+			top: 12px;
+			letter-spacing: -5px;
+			left: 16px;
+			content: "‘‘";
+			color: #f7901d;
+			font-size: 115px;
+			line-height: 1;
+			+below($media-size5)
+				display: none
+		+below($media-size5)
+			padding: 10px
+		&__text
+			font-size: 16px
+		&__to
+			margin-top: 10px
+			color: $color10
+			u
+				font-weight: 700
+				color: $color9
+		&__date
+			color: $color14
+			float: right
+			font-weight: 700
+			font-size: 12px
+			margin-top: 11px

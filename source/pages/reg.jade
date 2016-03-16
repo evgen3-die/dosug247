@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/register/register
+
+block content
+	+sidebar-left()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Регистрация"])
+		+page-title({"title": "Регистрация"})
+
+		+register()
+
+
+
+	.clear

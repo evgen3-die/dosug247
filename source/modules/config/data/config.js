@@ -1,4 +1,4 @@
 "config": {
-	"projectName": "Gulp-front",
-	"useSocialMetaTags": true
+	"projectName": "Dosug 7/24",
+	"useSocialMetaTags": false
 }

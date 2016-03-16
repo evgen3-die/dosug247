@@ -1,0 +1,16 @@
+extends ../modules/layout/layout
+include ../modules/catalog/catalog-salon-numbered
+
+block content
+	+sidebar-left-lk()
+	+sidebar-right()
+
+	main.main
+		+bread-crumbs(["Главная", "Личный кабинет", "Отложенные салоны"])
+		+page-title({"title": "Отложенные салоны"})
+
+		+catalog-salon-numbered()
+
+
+
+	.clear

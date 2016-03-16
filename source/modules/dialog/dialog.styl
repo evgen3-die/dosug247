@@ -1,0 +1,161 @@
+.dialog
+	margin-top: 35px
+	&__date
+		font-size: 13px
+		text-align: center
+		color: $color15
+		padding: 1px
+		background: $color2
+	&__write-message
+		background-color: $color2
+		padding: 20px
+		margin: 60px 0
+		+below($media-size5)
+			padding: 10px
+		&__image
+			float: left
+			hover-opacity()
+			+below($media-size5)
+				display: none
+			img
+				border-radius 50%
+		&__block
+			margin-left: 105px
+			+below($media-size5)
+				margin-left: 0
+
+.dialog-messages-list
+	margin: 32px 0
+	&__item
+		&__portrait
+			text-align: center
+			font-size: 13px
+			position: relative
+			hover-opacity()
+			&
+			&:visited
+			&:hover
+				text-decoration: none
+				color: $color15
+			+below($media-size5)
+				display: none
+			&__image
+				img
+					border-radius 50%
+			&__name
+				position: absolute
+				top: 100%
+				left: 0
+				right: 0
+				margin-top: 5px
+		&__content
+			margin: 0 110px
+			font-size: 14px
+			color: $color10
+			padding-top: 20px
+			+below($media-size5)
+				margin: 0
+				padding-top: 10px
+			&__inner
+				border: 1px solid $color16
+				border-radius 4px
+				display: inline-block
+				padding: 8px 23px
+				padding-right: 90px
+				text-align: left
+				position: relative
+				&[data-time]:after
+					content: attr(data-time)
+					position: absolute
+					right: 23px
+					top: 9px
+					font-size: 12px
+					font-weight: 700
+					color: $color15
+					+below($media-size5)
+						right: 12px
+				&:before
+					content: ''
+					position: absolute
+					right: 100%
+					top: 11px
+					width: 11px
+					height: 17px
+					background-repeat: no-repeat
+					background-image: url(../img/message/2.png)
+				+below($media-size5)
+					padding-right: 55px
+					padding-left: 10px
+				.dialog-messages-list__item &_not-wiew.dialog-messages-list__item__content__inner
+					border-color: rgba(247, 144, 29, .50)
+					border-width 2px
+					padding: 7px 22px
+					padding-right: 89px
+					&[data-time]:after
+						right: 22px
+						+below($media-size5)
+							right: 11px
+					&:before
+						right: auto
+						left: 100%
+						background-image: url(../img/message/3.png)
+					+below($media-size5)
+						padding-left: 9px
+						padding-right: 54px
+
+		&_you
+			.dialog-messages-list
+				&__item
+					&__portrait
+						float: left
+		&_not-you
+			.dialog-messages-list
+				&__item
+					&__portrait
+						float: right
+					&__content
+						text-align: right
+						&__inner
+							background-color: #fffbf4
+							&:before
+								right: auto
+								left: 100%
+								background-image: url(../img/message/1.png)
+
+
+.write-message-block
+	&__textarea-block
+		position: relative
+		&__button
+			position: absolute
+			top: 12px
+			right: 20px
+			background-image: url(../img/icons/smile.png)
+			background-repeat: no-repeat
+			width: 20px
+			height: 20px
+			hover-opacity()
+		&__textarea
+			width: 100%
+			resize none
+			min-height: 85px
+			display: block
+			border-radius 3px
+			background-color: white
+			border: none
+			padding: 10px 19px
+			padding-right: 40px
+
+	&__bottom
+		margin-top: 15px
+		&__smile-list
+			display: inline-block
+			margin-left: 12px
+			cursor: default
+			a
+				display: inline-block
+				text-decoration: none
+				margin-left: 2px
+				hover-opacity()
+				img
+					display: inline-block

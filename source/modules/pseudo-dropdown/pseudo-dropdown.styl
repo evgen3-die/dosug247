@@ -1,49 +1,293 @@
 .pseudo-dropdown
-	font-size 13px
+	font-size 14px
 	position relative
-	&__trigger
+	display: inline-block
+	color: $color1
+	.header__dropdown_metro &
+		+below($media-size4)
+			width: 100%
+	&__top
 		cursor pointer
-		padding 3px 8px
+		padding: 4px 25px
 		display inline-block
-		background #F9F9F9
-		box-shadow 0 1px 5px rgba(22,20,17,.16)
-
+		line-height: 24px
+		border1()
+		user-select none
+		position: relative
 		&:after
 			content ''
 			display inline-block
 			vertical-align middle
 			width 0
 			height 0
-			border 3px solid transparent
-			border-top-color #333
 			margin-left 4px
-			border-bottom none
+			border: 4px solid transparent;
+			border-top-width: 6px;
+			border-top-color: #f7901d;
+			.header__dropdown_metro &
+				+below($media-size4)
+					border-top-color white
+					position: absolute
+					right: 10px
+					top: 20px
+		&:hover
+			background: #fafafa
+		.header__dropdown_metro &:hover
+			+below($media-size4)
+				background: transparent
+		&:hover:after
+			border-top-color: black
+		.header &
+			+below($media-size2)
+				border: none
+			+below($media-size3)
+				padding-left: 10px
+				padding-right: 10px
+		.header__dropdown_metro &
+			+below($media-size4)
+				width: 100%
+				display: table
+				height: 40px
+	&__trigger
+	&__trigger-checkbox
+		font-size: 18px
+		margin-left: 7px
+		color: $color3
+		display: inline-block
+		.header &
+			+below($media-size4)
+				font-size: 15px
+		.header__dropdown_metro &
+			+below($media-size4)
+				color: white
+				margin-left: 0
+				line-height: 16px
+				display: table-cell
+				vertical-align: middle
+				padding-left: 33px
+				background-image: url(../img/icons/header-metro.png)
+				background-repeat: no-repeat
+				background-position: 0 5px
+	&__title
+		display: inline-block
+		.header &
+			+below($media-size4)
+				display: none
 	&__list
-		min-width 150px
-		max-width 300px
+		width 250px
 		position absolute
-		left 0
+		left: 0
 		top 100%
-		z-index 100
-		overflow hidden
+		z-index 99
+		margin-top: 15px
 		border-radius 3px
-		background #fff
+		background $color4
+		border1()
 		opacity 0
 		visibility hidden
 		transition all 0.2s ease-in-out 0s
-		box-shadow 0 0 7px rgba(0, 0, 0, 0.13)
+		shadow1()
+		.header__dropdown_metro &
+			+below($media-size4)
+				left: 50%
+				margin-left: -125px
+		.header__dropdown_city &
+			+below($media-size4)
+				left: auto
+				right: 0
 
+	&__list:before
+		content ''
+		position: absolute
+		bottom: 100%
+		left: 50%
+		width: 17px
+		height: 11px
+		margin-left: -8px
+		background-image: url(../img/triangle.png)
+		.header__dropdown_city &
+			+below($media-size4)
+				left: auto
+				margin-left: 0
+				right: 50px
+	&__hint
+		font-style: italic
+		font-size: 13px
+		color: $color5
+		margin: 5px 12px;
+		padding: 2px 5px;
+		margin-top: 12px
+		background: $color6
+	&__hint:before
+		display: inline-block
+		width: 15px
+		height: 15px
+		content: "!"
+		text-align: center
+		color: #f8f8f8
+		border-radius: 2px
+		background-color: #f7901d
+		font-size: 14px
+		font-weight: 700
+		line-height: 15px
+		font-style: normal
+		margin-right: 10px
+	&-list
+		max-height: 550px
+		overflow: hidden
+		margin: 12px
+		.header &
+			+below($media-size4)
+				max-height: 300px
 	&_dropdown_open &__list
 		opacity 1
 		visibility visible
 
+
+	&_title &__title
+		font-size: 16px
+
+	&_checkbox &-list__item
+		padding 7px 5px
+		cursor: default
+
+
+
+
 .pseudo-dropdown-list
 	ul-reset()
 	&__item
-		padding 5px 12px
+		padding 5px 13px
 		list-style none
 		cursor pointer
+	&__item_bold
+		font-weight: 700
+	&__item .form-item_style_default .form-item__label
+		font-size: 14px
+
+.pseudo-dropdown:not(.pseudo-dropdown_checkbox) .pseudo-dropdown-list
 	&__item:hover
-	&__item_active
-		background #0074D9
-		color #fff
+		background-color: $color2
+
+.pseudo-dropdown_map
+	position: absolute
+	right: 0
+	margin-top: -52px
+	.button
+		float: right
+		margin: 10px
+	.pseudo-dropdown
+		&__list
+			width: 950px
+			right: 0
+			margin-right: -225px
+			left: auto
+		&__trigger-checkbox
+			margin-left: 0
+		&-list
+			max-height: none
+			clear: both
+			background-image: url(../img/catalog/metromap.jpg)
+			background-repeat: no-repeat
+			background-position: 44px 0
+			height: 865px
+			&__item
+				position: absolute
+				padding: 0
+				.form-item__label
+					display: none
+
+.pseudo-dropdown_checkbox-openned
+	display: block
+	background-color: $color4
+	border1()
+	.pseudo-dropdown
+		&__top
+			display: block
+			border: none
+			cursor: default
+			padding: 10px 17px
+			font-weight: 700
+			color $color9
+			&:hover
+				background-color: transparent
+			&:after
+				display: none
+		&__title
+			font-size: 17px
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				border-top: 1px dashed
+		&__hint
+			margin-top: 0
+		&__list
+			position: relative
+			width: auto
+			top: auto
+			bottom: auto
+			left: auto
+			right: auto
+			opacity: 1
+			visibility: visible
+			box-shadow none
+			border: none
+			margin-top: 0
+			background-color: transparent
+			&:before
+				display: none
+		&-list
+			max-height: 582px
+
+.pseudo-dropdown_checkbox
+	position: relative
+	&-valid
+		position: relative
+		border-color: $color18
+		&:after
+			content: ''
+			position: absolute
+			width: 20px
+			height: 20px
+			background-image: url(../img/icons/valid.png)
+			top: 4px
+			left: 100%
+			margin-left: 6px
+			background-repeat: no-repeat
+			+below($media-size1)
+				display: none
+	&-errors
+		border-color $color17
+		.pseudo-dropdown_checkbox
+			&__errors
+				margin 0
+				padding: 5px 12px
+				position: absolute
+				left: 100%
+				top: 8px
+				background-color: $color17
+				margin-left: 10px
+				z-index: 10
+				+below($media-size1)
+					display: none
+				&:before
+					content ""
+					position: absolute
+					border: 5px solid transparent
+					border-right: 5px solid $color17
+					top: 50%
+					margin-top: -5px;
+					right: 100%
+				li
+					padding 0
+					margin 0
+					list-style none
+					background none
+					font-family $form-base-font-family
+					font-size 13px
+					color $color6
+					white-space: nowrap
