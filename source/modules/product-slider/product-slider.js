@@ -14,7 +14,8 @@ $('.product-slider').each(function(index, el) {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
-		asNavFor: $bottom.selector
+		asNavFor: $bottom.selector,
+		adaptiveHeight: true
 	});
 
 	$bottom.slick({
@@ -22,8 +23,8 @@ $('.product-slider').each(function(index, el) {
 		slidesToScroll: 1,
 		asNavFor: $top.selector,
 		focusOnSelect: true,
-		infinite: true
-
+		infinite: true,
+		adaptiveHeight: true
 	});
 
 
@@ -36,41 +37,45 @@ $('.product-slider').each(function(index, el) {
 
 	});
 
-	$temp.find('a').colorbox({
-		rel: 'gal',
-		photo: true,
-		transition: 'none',
-		title: function () {
-			var t = $(this);
-			var title = t.data('title');
+	enquire.register("screen and (min-width:900px) and (min-height:600px)", {
 
-			$bottom.slick('slickGoTo', t.index());
+		match : function() {
+			$temp.find('a').colorbox({
+				rel: 'gal',
+				photo: true,
+				transition: 'none',
+				title: function () {
+					var t = $(this);
+					var title = t.data('title');
 
-			if (title) return title;
-			else return '';
+					//$bottom.slick('slickGoTo', t.index(), true);
+
+					if (title) return title;
+					else return '';
+				},
+				maxWidth: "100%",
+				maxHeight: "100%",
+				current: "{current} из {total}",
+				onOpen: function(){
+					//$bottom.slick("slickSetOption", "waitForAnimate", false, false);
+					//$top.slick("slickSetOption", "waitForAnimate", false, false);
+
+
+					$("#colorbox").css("opacity", 0);
+				},
+				onClosed: function() {
+					//$bottom.slick("slickSetOption", "waitForAnimate", true, false);
+					//$top.slick("slickSetOption", "waitForAnimate", true, false);
+				},
+				onComplete : function() {
+					$("#colorbox").css("opacity", 1);
+				}
+			});
 		},
-		maxWidth: "100%",
-		maxHeight: "100%",
-		current: "{current} из {total}",
-		onOpen: function(){
-			$bottom.slick("slickSetOption", "waitForAnimate", false, false);
-			$top.slick("slickSetOption", "waitForAnimate", false, false);
-
-
-			$("#colorbox").css("opacity", 0);
-		},
-		onClosed: function() {
-			$bottom.slick("slickSetOption", "waitForAnimate", true, false);
-			$top.slick("slickSetOption", "waitForAnimate", true, false);
-		},
-		onComplete : function() {
-			$("#colorbox").css("opacity", 1);
+		unmatch : function() {
+			$.colorbox.remove();
 		}
 	});
-
-	if (Modernizr.touch) {
-		$.colorbox.remove();
-	}
 
 
 

@@ -17,6 +17,11 @@
 		background: $color3
 		line-height: 45px
 		z-index: 10
+		+below($media-size1)
+			width: 35px
+			height: 35px
+			font-size: 20px
+			line-height: 35px
 .catalog-item
 	&_checked &__bottom
 		position: relative
@@ -35,7 +40,7 @@
 			height: 67px
 			z-index: -1
 			+below($media-size1)
-				opacity: .4
+				opacity: .6
 			.catalog_type1 &
 				+below($media-size4)
 					top: 60px
@@ -181,9 +186,6 @@
 
 	& [data-views]
 		position: relative
-		.catalog_type2 &
-			+below($media-size1)
-				padding-right: 80px
 		&:after
 			position: absolute;
 			top: 1px;
@@ -196,6 +198,10 @@
 			background-image: url(../img/icons/views.png)
 			background-repeat: no-repeat
 			background-position: 4px center
+			.catalog_type2 &
+				+below($media-size1)
+					right: 100%
+					top: 0
 			.catalog_type3 &
 				+below($media-size1)
 					top: -62px;
@@ -222,6 +228,9 @@
 		img
 			display: block
 			max-width: 100%
+			.catalog_type3 &
+				+below($media-size1)
+					width: 100%
 		.catalog_type1 &
 		.catalog_type2 &
 			+below($media-size1)
@@ -242,6 +251,9 @@
 		margin: 10px 0
 		color: $color7
 		height: 24px
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 		.catalog_type1 &
 		.catalog_type2 &
 			+below($media-size1)
@@ -260,7 +272,14 @@
 		font-size 18px
 		color: $color10
 		margin: 10px 0
-		height: 22px
+		&__inner
+			height: 21px
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			line-height: 21px
+		+below($media-size1)
+			font-size: 15px
 		.catalog_type1 &
 		.catalog_type2 &
 			+below($media-size1)
@@ -290,6 +309,9 @@
 		padding-bottom: 20px
 		color: $color9
 		height: 40px
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 		.catalog_type1 &
 		.catalog_type2 &
 			+below($media-size1)
@@ -318,7 +340,6 @@
 		font-size: 14px
 		position: relative
 		color: $color10
-		height: 65px
 		.catalog_type1 &
 			+below($media-size1)
 				background-color: $color6
@@ -338,6 +359,11 @@
 				+below($media-size1)
 					top: -11px
 					z-index: -1
+		&__inner
+			overflow: hidden
+			height: 48px
+			+below($media-size1)
+				height: 32px
 	&__hidden
 		padding-bottom: 5px
 		background: $color11

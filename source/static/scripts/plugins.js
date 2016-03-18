@@ -177,3 +177,8 @@
 // Text overflow plugin
 // ---------------------------------------------------------------------------
 //= require plugins/jquery.dotdotdot.js
+
+
+// JS media plugin
+// ---------------------------------------------------------------------------
+//= require plugins/enquire.js

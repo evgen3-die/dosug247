@@ -30,11 +30,20 @@
 		padding: 10px
 	&__name
 		height: 27px
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 		b
 			font-size: 18px
 			color: $color7
 	&__phone
 		height: 24px
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		line-height: 24px
+		+below($media-size1)
+			font-size: 13px
 		b
 			font-weight: normal
 			color: $color7

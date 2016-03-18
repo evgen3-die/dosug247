@@ -57,13 +57,20 @@
 			font-size: 16px
 			margin-top: 30px
 			padding-top: 5px
+			+below($media-size4)
+				margin-top: 0
+				padding-top: 0
 			b
 				font-size: 18px
 
 		&__float-right
-			float: right
+			position: absolute
+			right: 0
+			top: 0
 			+below($media-size4)
 				float: none
+				position: static
+				margin: 19px 0
 			
 		&__required
 			color: $color17

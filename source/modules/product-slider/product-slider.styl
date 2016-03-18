@@ -29,11 +29,11 @@
 		&__item
 			cursor: pointer
 			position: relative
-			height: 509px
 			font-size: 0
 			img
 				max-width: 100%
 				max-height: 100%
+				margin: 0 auto
 			&:after
 				content: ''
 				position: absolute
@@ -69,19 +69,33 @@
 			img
 				max-width: 100%
 				max-height: 100%
-	.slick-slide {
-		text-align: center;
-	}
+				margin 0 auto
+		.slick-slide {
+			text-align: center;
+		}
 
-	.slick-slide::before {
-		content: '';
-		display: inline-block;
-		vertical-align: middle;
-		height: 100%
-	}
+		.slick-slide::before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%
+		}
 
-	.slick-slide img {
-		vertical-align: middle;
-		display: inline-block;
-	}
+		.slick-slide img {
+			vertical-align: middle;
+			display: inline-block;
+		}
 
+.product-slider
+	&__fake-image
+		text-align: center
+		img
+			max-width: 100%
+			padding-bottom: 113px
+	&__top
+	&__bottom
+		display: none
+		&.slick-initialized
+			display: block
+			& + .product-slider__fake-image
+				display: none

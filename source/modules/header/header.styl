@@ -174,5 +174,20 @@
 				border-radius 2px
 
 
-	&_fixed &__top
-		box-shadow 0px 2px 3px rgba(#000, 0.04)
+.page__header_fixed
+	+above($media-size4)
+		padding-bottom: 39px
+	+below($media-size4)
+		padding-top: 89px
+	.header
+		+below($media-size4)
+			position: fixed
+			right: 0
+			left: 0
+			top: -49px
+		&__bottom
+			+above($media-size4)
+				position: fixed
+				top: 0
+				left: 0
+				right: 0

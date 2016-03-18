@@ -1,12 +1,11 @@
-/*
-var $header    = $('.header')
-	$headerTop = $header.find('.header__top'),
+
+var $header    = $('.page__header'),
+	$headerBottom = $header.find('.header__bottom'),
 	$window    = $(window),
-	marginTop  = 0,
-	offset     = $headerTop.offset().top,
+	offset     = $headerBottom.offset().top,
 	classAdded = false;
 
-$window.scroll(function() {
+ /*$window.scroll(function() {
 	if ($window.scrollTop() > offset) {
 		if (classAdded === false) {
 			$header.addClass('header_fixed');
@@ -47,4 +46,20 @@ $('.logo').click(function(event) {
 });
 */
 
+$window.on('resize', function () {
+	offset = $headerBottom.offset().top;
+});
 
+
+$window.scroll(function() {
+	if ($window.scrollTop() > offset) {
+		if (classAdded === false) {
+			$header.addClass('page__header_fixed');
+		}
+		classAdded = true;
+	}
+	else {
+		$header.removeClass('page__header_fixed');
+		classAdded = false;
+	}
+});

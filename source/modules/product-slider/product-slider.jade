@@ -8,3 +8,5 @@ mixin product-slider(data)
 			each ent, num in data.list
 				.product-slider__bottom__item
 					img(src=ent.src, alt="")
+		.product-slider__fake-image
+			img(src=data.list[0].src, alt="Леночка")
