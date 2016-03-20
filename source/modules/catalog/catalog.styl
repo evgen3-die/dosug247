@@ -68,6 +68,9 @@
 			margin-top: 44px
 			box-shadow none
 			background-color: transparent
+	.catalog_type1 &
+		+below($media-size4)
+			margin-top: 60px
 
 
 
@@ -263,11 +266,10 @@
 				right: 0
 		.catalog_type1 &
 			+below($media-size4)
-				width: 50%
-				right: auto
+				margin-bottom: 30px
 		.catalog_type1 &
 			+below($media-size5)
-				width: 130px
+				//
 	&__tel
 		font-size 18px
 		color: $color10
@@ -278,8 +280,6 @@
 			white-space: nowrap;
 			overflow: hidden;
 			line-height: 21px
-		+below($media-size1)
-			font-size: 15px
 		.catalog_type1 &
 		.catalog_type2 &
 			+below($media-size1)
@@ -293,12 +293,12 @@
 			+below($media-size4)
 				top: auto
 				bottom: 100%
-				width: 50%
+				left: 0
+				padding-left: 0
+				margin-bottom: 5px
 		.catalog_type1 &
 			+below($media-size5)
-				width: auto
-				left: 130px
-				font-size: 17px
+				//
 
 		b
 			color: $color9

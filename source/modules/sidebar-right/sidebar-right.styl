@@ -8,6 +8,8 @@
 			margin-top: 0
 	+below($media-size1)
 		display: none
+	img
+		max-width: 100%
 
 
 .girl-reduce
@@ -26,6 +28,7 @@
 	&__image
 		display: block
 		max-width: 100%
+		width: 100%
 	&__text
 		padding: 10px
 	&__name
@@ -42,8 +45,6 @@
 		white-space: nowrap;
 		overflow: hidden;
 		line-height: 24px
-		+below($media-size1)
-			font-size: 13px
 		b
 			font-weight: normal
 			color: $color7

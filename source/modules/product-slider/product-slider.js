@@ -37,7 +37,7 @@ $('.product-slider').each(function(index, el) {
 
 	});
 
-	enquire.register("screen and (min-width:800px) and (min-height:500px)", {
+	enquire.register("screen and (min-width:700px) and (min-height:500px)", {
 
 		match : function() {
 			$temp.find('a').colorbox({
