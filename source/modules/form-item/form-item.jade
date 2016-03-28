@@ -49,6 +49,9 @@ mixin form-item()
 
 	- if (_attributes.style)
 		- _attributes.classes.push(_attributes.baseClass + "_style_" + _attributes.style)
+	
+	- if (_attributes.disabled)
+		- _attributes.classes.push(_attributes.baseClass + "_disabled")	
 
 
 	- if (_attributes.checked)
@@ -69,7 +72,8 @@ mixin form-item()
 				input(type = _attributes.type, name = _attributes.name, id = _attributes.id, value = _attributes.value, checked = _attributes.checked, disabled = _attributes.disabled)
 
 			if (_attributes.label)
-				span(class=_attributes.baseClass + "__label")!= _attributes.label
+				span(class=_attributes.baseClass + "__label-wrap")
+					span(class=_attributes.baseClass + "__label")!= _attributes.label
 	
 	- else if (_attributes.type === "captcha")
 		div(class=_attributes.classes)

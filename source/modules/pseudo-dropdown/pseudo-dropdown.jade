@@ -98,5 +98,5 @@ mixin pseudo-dropdown-type3(data)
 
 						if (ent.bold)
 							- classes.push(classes[0] + '_bold')
-						li(class=classes, data-value="#{num}")
-							+form-item(type="checkbox", name="checkbox-group-1", id="#{num}", label=ent.title)
+						li(class=classes, data-value="#{num}" id="moscow-" + ent.id)
+							+form-item(type="checkbox", name="checkbox-group-1", id="#{num}", label=ent.title, disabled=ent.disabled)

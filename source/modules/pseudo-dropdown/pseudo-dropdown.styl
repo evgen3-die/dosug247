@@ -169,33 +169,6 @@
 	&__item:hover
 		background-color: $color2
 
-.pseudo-dropdown_map
-	position: absolute
-	right: 0
-	margin-top: -52px
-	.button
-		float: right
-		margin: 10px
-	.pseudo-dropdown
-		&__list
-			width: 950px
-			right: 0
-			margin-right: -225px
-			left: auto
-		&__trigger-checkbox
-			margin-left: 0
-		&-list
-			max-height: none
-			clear: both
-			background-image: url(../img/catalog/metromap.jpg)
-			background-repeat: no-repeat
-			background-position: 44px 0
-			height: 865px
-			&__item
-				position: absolute
-				padding: 0
-				.form-item__label
-					display: none
 
 .pseudo-dropdown_checkbox-openned
 	display: block
@@ -291,3 +264,810 @@
 					font-size 13px
 					color $color6
 					white-space: nowrap
+
+
+map-text-left()
+	.form-item_type_checkbox
+	.form-item_type_radio
+		padding-left: 0
+		padding-right: 19px
+		text-align: right
+		.form-item__input
+			left: auto
+			right: 0
+map-two-lines(w)
+	.form-item__label-wrap
+		max-width: w
+map-large-padding-right()
+	.form-item_type_checkbox
+	.form-item_type_radio
+		padding-right: 23px
+map-large-padding-left()
+	.form-item_type_checkbox
+	.form-item_type_radio
+		padding-left: 23px
+
+.pseudo-dropdown_map
+	.pseudo-dropdown__list
+		+below($media-size1)
+			left: auto
+			right: 0
+			margin-right: 0
+.pseudo-dropdown_map
+	position: absolute
+	right: 0
+	margin-top: -52px
+	+below(1000px)
+		display: none
+	.pseudo-dropdown__list:before
+		margin-left: 145px
+		+below($media-size1)
+			margin-left: 375px
+	.button
+		float: right
+		margin: 10px
+	.pseudo-dropdown
+		&__list
+			width: 924px
+			right: 0
+			margin-right: -225px
+			left: auto
+		&__trigger-checkbox
+			margin-left: 0
+		&-list
+			max-height: none
+			clear: both
+			background-image: url(../img/catalog/metromap-clear.jpg)
+			background-repeat: no-repeat
+			background-position: 0 0;
+			height: 975px
+			&__item
+				position: absolute
+				padding: 0
+				.form-item_type_checkbox
+				.form-item_type_radio
+					padding: 0
+					line-height: 16px
+					padding-left: 19px
+
+					.form-item__input
+						top: 0
+						&.checked-custom + .form-item__label-wrap .form-item__label
+							background-color: #ffdbc3
+					&.form-item_disabled
+						&:hover
+							opacity: 1
+				.form-item_type_checkbox:not(.form-item_disabled)
+				.form-item_type_radio:not(.form-item_disabled)
+					&:hover
+						opacity: 1
+						.jq-checkbox:not(.checked)
+							background-color: rgba(255, 255, 255, 0.5)
+						.form-item__label
+							color: $color3
+				.form-item__label-wrap
+					display: inline-block
+
+					line-height: 10px
+				.form-item__label
+					font-size: 10px
+					text-transform: uppercase
+					font-weight: 700
+					color: black
+					border-radius: 5px
+					padding 0 2px
+					vertical-align: top
+					display: inline
+					background: white
+				.jq-checkbox
+					margin: 0
+					width: 16px
+					height: 16px
+					background-color: transparent
+					&.checked
+						background-image: none
+						position: relative
+						/*&:before
+							content: ''
+							border 2px solid $color3
+							position: relative
+							width: 100%
+							height: 100%
+							display: block
+							border-radius 50%*/
+						&:after
+							content: ''
+							width: 6px
+							height: 6px
+							position: absolute
+							top: 0
+							left: 0
+							right: 0
+							bottom: 0
+							margin: auto
+							background-color: white
+							border-radius 50%
+				right1 = 731px
+				right2 = 769px
+				right3 = 595px
+				right4 = 442px
+				&#moscow
+					&-mitino
+						map-text-left()
+						top: 29px
+						right: right1
+					&-volokolamskaya
+						map-text-left()
+						top: 47px
+						right: right1
+					&-strogino
+						map-text-left()
+						top: 66px
+						right: right1
+					&-krilatskoye
+						map-text-left()
+						top: 164px
+						right: right2
+					&-molodejnaya
+						map-text-left()
+						top: 182px
+						right: right2
+					&-kuncevskaya
+						map-text-left()
+						top: 201px
+						right: right2
+					&-pionerskaya
+						map-text-left()
+						top: 219px
+						right: right2
+					&-filevskii-park
+						map-text-left()
+						top: 238px
+						right: right2
+					&-bagrationovskaya
+						map-text-left()
+						top: 256px
+						right: right2
+					&-fili
+						map-text-left()
+						top: 275px
+						right: right2
+					&-kutuzovskaya
+						map-text-left()
+						top: 293px
+						right: right2
+					&-studencheskaya
+						map-text-left()
+						top: 312px
+						right: right2
+
+					&-rechnoi-vokzal
+						map-text-left()
+						top: 30px
+						right: right3
+					&-vodnii-stadion
+						map-text-left()
+						top: 48px
+						right: right3
+					&-voykovskaya
+						map-text-left()
+						top: 67px
+						right: right3
+					&-sokol
+						map-text-left()
+						top: 85px
+						right: right3
+					&-aeroport
+						map-text-left()
+						top: 104px
+						right: right3
+					&-dinamo
+						map-text-left()
+						top: 122px
+						right: right3
+
+					&-altufevo
+						map-text-left()
+						top: 29px
+						right: right4
+					&-biberevo
+						map-text-left()
+						top: 47px
+						right: right4
+					&-otradnoye
+						map-text-left()
+						top: 66px
+						right: right4
+					&-vladikino
+						map-text-left()
+						top: 84px
+						right: right4
+					&-petrovsko-razumovskaya
+						map-text-left()
+						top: 103px
+						right: right4
+
+					right5 = 647px
+					&-planyernaya
+						map-text-left()
+						top: 149px
+						right: right5
+					&-shodnenskaya
+						map-text-left()
+						top: 168px
+						right: right5
+					&-tushinskaya
+						map-text-left()
+						top: 186px
+						right: right5
+					&-shukinskaya
+						map-text-left()
+						top: 205px
+						right: right5
+					&-oktyabrskoye-pole
+						map-text-left()
+						top: 224px
+						right: right5
+					&-polyezhaevskaya
+						map-text-left()
+						top: 242px
+						right: right5
+					&-begovaya
+						map-text-left()
+						top: 260px
+						right: right5
+					&-ulica-1905-goda
+						map-text-left()
+						top: 279px
+						right: right5
+					&-barikadnaya
+						map-text-left()
+						top: 304px
+						right: right5
+
+					left1 = 537px
+					&-medvedkovo
+						top: 30px
+						left: left1
+					&-babushkinskaya
+						top: 48px
+						left: left1
+					&-sviblovo
+						top: 67px
+						left: left1
+					&-botanicheskii-sad
+						top: 85px
+						left: left1
+					&-VDNH
+						top: 104px
+						left: left1
+					&-alekseevskaya
+						top: 122px
+						left: left1
+					&-rijskaya
+						top: 141px
+						left: left1
+
+					left2 = 668px
+					&-ulica-podbelskogo
+						top: 30px
+						left: left2
+					&-cherkizovskaya
+						top: 49px
+						left: left2
+					&-preobrajenskaya-ploshad
+						top: 67px
+						left: left2
+					&-sokolniki
+						top: 86px
+						left: left2
+					&-krasnoselskaya
+						top: 105px
+						left: left2
+
+					left3 = 752px
+					&-shelkovskaya
+						top: 140px
+						left: left3
+					&-pervomayskaya
+						top: 159px
+						left: left3
+					&-izmaylovskaya
+						top: 177px
+						left: left3
+					&-izmaylovskii-park
+						top: 196px
+						left: left3
+					&-semenovskaya
+						top: 214px
+						left: left3
+					&-elektrozavodskaya
+						top: 233px
+						left: left3
+					&-baumanskaya
+						top: 251px
+						left: left3
+					&-novogireevo
+						top: 328px
+						left: left3
+					&-perovo
+						top: 346px
+						left: left3
+					&-shosse-entuziastov
+						top: 365px
+						left: left3
+					&-aviamotornaya
+						top: 383px
+						left: left3
+
+					right6 = 750px
+					&-frunzenskaya
+						map-text-left()
+						top: 835px
+						right: right6
+					&-sportivnaya
+						map-text-left()
+						top: 854px
+						right: right6
+					&-vorobievi-godi
+						map-text-left()
+						top: 872px
+						right: right6
+					&-universitet
+						map-text-left()
+						top: 891px
+						right: right6
+					&-prospekt-vernandskogo
+						map-text-left()
+						top: 909px
+						right: right6
+					&-yugo-zapadnaya
+						map-text-left()
+						top: 928px
+						right: right6
+
+					right7 = 560px
+					&-shabolovskaya
+						map-text-left()
+						top: 742px
+						right: right7
+					&-leninskii-prospect
+						map-text-left()
+						top: 760px
+						right: right7
+					&-akademicheskaya
+						map-text-left()
+						top: 779px
+						right: right7
+					&-profsoyuznaya
+						map-text-left()
+						top: 797px
+						right: right7
+					&-noviye-cheremushki
+						map-text-left()
+						top: 816px
+						right: right7
+					&-kalujskaya
+						map-text-left()
+						top: 834px
+						right: right7
+					&-belyaevo
+						map-text-left()
+						top: 853px
+						right: right7
+					&-konkovo
+						map-text-left()
+						top: 871px
+						right: right7
+					&-teplii-stan
+						map-text-left()
+						top: 890px
+						right: right7
+					&-yasenevo
+						map-text-left()
+						top: 908px
+						right: right7
+					&-bitsevskii-park
+						map-text-left()
+						top: 927px
+						right: right7
+
+					right8 = 424px
+					&-serpuhovskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 706px
+						right: right8
+					&-tulskaya
+						map-text-left()
+						top: 731px
+						right: right8
+					&-nagatinskaya
+						map-text-left()
+						top: 750px
+						right: right8
+					&-nagornaya
+						map-text-left()
+						top: 768px
+						right: right8
+					&-nahimovskii-prospekt
+						map-text-left()
+						map-two-lines(115px)
+						top: 786px
+						right: right8
+					&-sevastopolskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 810px
+						right: right8
+					&-chertanovskaya
+						map-text-left()
+						top: 836px
+						right: right8
+					&-yujnaya
+						map-text-left()
+						top: 854px
+						right: right8
+					&-prajskaya
+						map-text-left()
+						top: 873px
+						right: right8
+					&-ul-akademika-yangelya
+						map-text-left()
+						top: 891px
+						right: right8
+					&-annino
+						map-text-left()
+						top: 910px
+						right: right8
+					&-bulvar-dmitriya-donskogo
+						map-two-lines(115px)
+						map-text-left()
+						top: 928px
+						right: right8
+
+					right9 = 277px
+					&-kantemirovskaya
+						map-text-left()
+						top: 823px
+						right: right9
+					&-caricino
+						map-text-left()
+						top: 841px
+						right: right9
+					&-orehovo
+						map-text-left()
+						top: 860px
+						right: right9
+					&-domodedovskaya
+						map-text-left()
+						top: 878px
+						right: right9
+					&-krasnogvardeyskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 903px
+						right: right9
+					&-brateevo
+						map-text-left()
+						top: 928px
+						right: right9
+
+					left4 = 645px
+					&-dubrovka
+						top: 730px
+						left: left4
+					&-kojuhovskaya
+						top: 748px
+						left: left4
+					&-pechatniki
+						top: 767px
+						left: left4
+					&-voljskaya
+						top: 785px
+						left: left4
+					&-lyblino
+						top: 804px
+						left: left4
+					&-bratislavskaya
+						top: 823px
+						left: left4
+					&-mariino
+						top: 841px
+						left: left4
+					&-borisovo
+						top: 860px
+						left: left4
+					&-shipilovskaya
+						top: 878px
+						left: left4
+					&-zyablikovo
+						map-large-padding-left()
+						top: 903px
+						left: left4
+
+					left5 = 748px
+					&-volgogradskii-prospekt
+						top: 853px
+						left: left5
+					&-tekstilshiki
+						top: 872px
+						left: left5
+					&-kuzminki
+						top: 890px
+						left: left5
+					&-ryazanskii-prospekt
+						top: 909px
+						left: left5
+					&-vihino
+						top: 927px
+						left: left5
+
+					rigit10 = 482px
+					&-timiryazevskaya
+						map-text-left()
+						top: 142px
+						right: rigit10
+					&-dmitrovskaya
+						map-text-left()
+						top: 161px
+						right: rigit10
+					&-savelovskaya
+						map-text-left()
+						top: 179px
+						right: rigit10
+					&-mendeleevskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 212px
+						right: rigit10
+					&-novoslobodskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 234px
+						right: rigit10
+					&-cvetnoi-bulvar
+						map-text-left()
+						map-large-padding-right()
+						top: 300px
+						right: rigit10
+
+					left6 = 440px
+					&-marina-rosha
+						map-two-lines(65px)
+						top: 149px
+						left: left6
+					&-dostoevskaya
+						map-large-padding-left()
+						top: 212px
+						left: left6
+					&-suvorovskaya-ploshad
+						map-large-padding-left()
+						map-two-lines(70px)
+						top: 234px
+						left: left6
+					&-trubnaya
+						map-large-padding-left()
+						top: 300px
+						left: left6
+
+					left7 = 304px
+					&-belorusskaya
+						map-large-padding-left()
+						top: 264px
+						left: left7
+					&-mayakovskaya
+						top: 344px
+						left: left7
+
+					&-park-pobedi
+						map-text-left()
+						top: 379px
+						right: 750px
+					&-kievskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 420px
+						right: 687px
+					&-krasnopresnenskaya
+						map-large-padding-left()
+						top: 326px
+						left: 235px
+
+					rigit11 = 578px
+					&-aleksandrovskii-sad
+						map-text-left()
+						map-large-padding-right()
+						top: 506px
+						right: rigit11
+					&-borovickaya
+						map-text-left()
+						map-large-padding-right()
+						top: 529px
+						right: rigit11
+					&-arbatskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 552px
+						right: rigit11
+					&-biblioteka-im-lenina
+						map-text-left()
+						map-large-padding-right()
+						top: 574px
+						right: rigit11
+
+					&-smolenskaya
+						map-text-left()
+						top: 478px
+						right: 653px
+					&-park-kulturi
+						map-text-left()
+						map-large-padding-right()
+						top: 621px
+						right: 625px
+					&-kropotkinskaya
+						left 281px
+						top: 598px
+					&-oktyabrskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 672px
+						right: 545px
+					&-smolenskaya2
+						left: 238px
+						top: 439px
+					&-arbatskaya2
+						left: 271px
+						top: 473px
+					&-pushkinskaya
+						map-text-left()
+						map-large-padding-right()
+						right: 594px
+						top: 380px
+					&-chehovskaya
+						map-text-left()
+						map-large-padding-right()
+						right: 578px
+						top: 396px
+					&-tverskaya
+						map-text-left()
+						map-large-padding-right()
+						right: 562px
+						top: 412px
+					&-prospekt-mira
+						map-large-padding-left()
+						left: 536px
+						top: 242px
+						map-two-lines(70px)
+					&-kahovskaya
+						map-large-padding-left()
+						left: 481px
+						top: 810px
+					&-varshavskaya
+						left: 508px
+						top: 780px
+
+					left7 = 549px
+					&-paveleckaya
+						map-large-padding-left()
+						left: left7
+						top: 643px
+					&-avtozavodskaya
+						left: left7
+						top: 691px
+					&-kolomenskaya
+						left: left7
+						top: 710px
+					&-kashirskaya
+						map-large-padding-left()
+						left: left7
+						top: 736px
+
+					&-polyanka
+						left: 412px
+						top: 638px
+					&-dobrininskaya
+						map-text-left()
+						map-large-padding-right()
+						right: 424px
+						top: 684px
+					&-proletarskaya
+						map-large-padding-left()
+						left: 696px
+						top: 644px
+
+					left8 = 680px
+					&-ploshad-ilicha
+						map-large-padding-left()
+						left: left8
+						top: 473px
+					&-rimskaya
+						map-large-padding-left()
+						left: left8
+						top: 495px
+					&-krestyanskaya-zastava
+						map-large-padding-left()
+						left: left8
+						top: 628px
+
+					&-taganskaya
+						map-large-padding-left()
+						left: 616px
+						top: 563px
+					&-marksistskaya
+						map-large-padding-left()
+						left: 633px
+						top: 520px
+					&-kurskaya
+						map-large-padding-left()
+						left: 632px
+						top: 390px
+					&-chkalovskaya
+						map-large-padding-left()
+						left: 642px
+						top: 434px
+					&-komsomolskaya
+						map-large-padding-left()
+						left: 577px
+						top: 301px
+					&-krasnie-vorota
+						map-large-padding-left()
+						left: 555px
+						top: 323px
+					&-tretyakovskaya
+						map-large-padding-left()
+						left: 474px
+						top: 534px
+					&-novokuznetskaya
+						map-large-padding-left()
+						left: 459px
+						top: 550px
+					&-kitai-gorod
+						map-large-padding-left()
+						top: 466px
+						left: 520px
+					&-sretenskii-bulvar
+						map-large-padding-left()
+						map-two-lines(75px)
+						top: 380px
+						left: 520px
+					&-ohotnii-ryad
+						map-large-padding-left()
+						top: 485px
+						left: 393px
+					&-teatralnaya
+						map-large-padding-left()
+						top: 502px
+						left: 409px
+					&-ploshad-revolucii
+						map-text-left()
+						map-large-padding-right()
+						map-two-lines(75px)
+						top: 518px
+						right: 458px
+					&-kuznetskii-most
+						map-text-left()
+						map-large-padding-right()
+						top: 396px
+						right: 432px
+					&-lubyanka
+						map-text-left()
+						map-large-padding-right()
+						top: 412px
+						right: 416px
+
+					rigit12 = 362px
+					&-chistie-prudi
+						map-text-left()
+						map-large-padding-right()
+						top: 358px
+						right: rigit12
+					&-turgenyevskaya
+						map-text-left()
+						map-large-padding-right()
+						top: 335px
+						right: rigit12
+					&-suharevskaya
+						map-text-left()
+						top: 287px
+						right: rigit12

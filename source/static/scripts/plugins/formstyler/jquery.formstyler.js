@@ -105,7 +105,7 @@
 						overflow: 'hidden'
 					});
 
-					if (el.is(':checked')) checkbox.addClass('checked');
+					if (el.is(':checked')) checkbox.addClass('checked').parent().addClass('checked-custom');
 					if (el.is(':disabled')) checkbox.addClass('disabled');
 
 					// клик на псевдочекбокс
@@ -113,10 +113,10 @@
 						if (!checkbox.is('.disabled')) {
 							if (el.is(':checked')) {
 								el.prop('checked', false);
-								checkbox.removeClass('checked');
+								checkbox.removeClass('checked').parent().removeClass('checked-custom');
 							} else {
 								el.prop('checked', true);
-								checkbox.addClass('checked');
+								checkbox.addClass('checked').parent().addClass('checked-custom');
 							}
 							el.change();
 							return false;
@@ -133,8 +133,8 @@
 					});
 					// переключение по Space или Enter
 					el.on('change.styler', function() {
-						if (el.is(':checked')) checkbox.addClass('checked');
-						else checkbox.removeClass('checked');
+						if (el.is(':checked')) checkbox.addClass('checked').parent().addClass('checked-custom');
+						else checkbox.removeClass('checked').parent().removeClass('checked-custom');
 					})
 					// чтобы переключался чекбокс, который находится в теге label
 					.on('keydown.styler', function(e) {
